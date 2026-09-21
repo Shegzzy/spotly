@@ -46,3 +46,8 @@ app.*.map.json
 
 # Raw integration-test screenshots (compressed copies live in docs/screenshots)
 /screenshots/
+
+# Firebase CLI
+firebase-debug.log
+firestore-debug.log
+.firebase/

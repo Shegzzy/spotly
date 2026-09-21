@@ -20,6 +20,8 @@ dependencies:
   url_launcher: ^6.3.2
   share_plus: ^13.3.0
   cupertino_icons: ^1.0.9
+  firebase_core: ^4.15.0
+  cloud_firestore: ^6.10.0
 
 dev_dependencies:
   flutter_test:

@@ -15,7 +15,7 @@ flutter pub get
 flutter run
 ```
 
-It needs no API keys and no backend. The map uses OpenStreetMap tiles, and the places come from bundled sample data (42 fictional businesses across Lagos). The iOS simulator starts in California, so either set a Lagos location (**Features → Location → Custom Location**, e.g. `6.445, 3.470`) or let the app fall back to showing Lagos.
+It needs no API keys. Places load from Cloud Firestore (the `spotly-lagos` project is already configured), and the app falls back to the same 42 places bundled in `assets/data/places.json` if Firestore is unreachable. To skip Firebase entirely, run `flutter run --dart-define=DATA_SOURCE=bundled`. The iOS simulator starts in California, so either set a Lagos location (**Features → Location → Custom Location**, e.g. `6.445, 3.470`) or let the app fall back to showing Lagos.
 
 ```bash
 flutter test          # unit and widget tests
@@ -41,6 +41,16 @@ The images in `docs/screenshots` are compressed copies of that run.
 - **Every state is handled.** Loading, empty results (with a "Clear" action), load errors (with "Retry"), deep links to a place that doesn't exist, and Android back to dismiss a selection.
 - **Accurate hours.** Opening hours are evaluated in Lagos time (WAT, UTC+1) wherever the viewer is. Late-night windows that cross midnight (e.g. 17:00–02:00) and 24-hour places are handled.
 
+## Firebase
+
+- **Reads.** `FirestorePlaceRepository` reads the `places` collection. Locations are stored as native `GeoPoint`s, ready for geo queries.
+- **Fallback.** `FallbackPlaceRepository` wraps Firestore and switches to the bundled data if Firestore fails, times out (8 s) or returns nothing. The map is never empty because of the backend.
+- **Security rules.** `firestore.rules` makes `places` public and read-only, and denies everything else. Clients can't write anything.
+- **Seeding.** `dart run tool/seed_firestore.dart` uploads `assets/data/places.json` and removes stale documents. Because clients can't write, it deploys temporary rules that allow writes to `places` only, for ten minutes. It then always redeploys the locked rules, even if the upload fails.
+- **Using your own project.** Run `flutterfire configure`, then the seed script, then `firebase deploy --only firestore:rules`.
+
+The Firebase config files in the repo (`firebase_options.dart`, `google-services.json`, `GoogleService-Info.plist`) contain public project identifiers, not secrets. Access is governed by the security rules.
+
 ## Architecture
 
 Code is organised by feature, with a small layer stack inside each feature. Riverpod handles state and go_router handles navigation.
@@ -51,7 +61,7 @@ lib/
   features/
     places/
       domain/        Place, PlaceCategory, OpeningHours, PlaceSearch, PlaceRepository
-      data/          AssetPlaceRepository (bundled JSON)
+      data/          FirestorePlaceRepository, AssetPlaceRepository, FallbackPlaceRepository
       application/   providers: places, filter, search results, selection, clock
       presentation/  map/ (screen, pins, clustering, carousel, search) · details/ · common/
     location/      LocationService (geolocator) + UserLocation provider
@@ -60,16 +70,17 @@ assets/data/places.json   sample data
 ```
 
 - **The domain layer is plain Dart.** Search ranking and opening-hours logic are pure functions, so they're thoroughly unit tested.
-- **The data source can be swapped.** The UI only depends on `PlaceRepository`. Swapping in another backend is a single provider override in `main.dart`.
-- **Search runs on the device.** With a city-sized dataset this is instant and works offline. At larger scale it would move to a search service (Algolia, Typesense) with geohash queries.
+- **The data source can be swapped.** The UI only depends on `PlaceRepository`. `main.dart` picks Firestore with the bundled fallback, and tests inject fakes through a single provider override.
+- **Search runs on the device.** Firestore has no full-text search. With a city-sized dataset, fetching once and searching locally is instant and works offline. At larger scale it would move to a search service (Algolia, Typesense) with geohash queries.
 - **Testable seams.** The location service, repository, clock and map tiles are all providers, so tests swap in fakes and need no network or GPS.
 
 ## Tech
 
-Flutter 3.44 · Dart 3.12 · flutter_riverpod 3 · go_router · flutter_map + OpenStreetMap · geolocator · cached_network_image · url_launcher · share_plus · shared_preferences
+Flutter 3.44 · Dart 3.12 · Cloud Firestore · flutter_riverpod 3 · go_router · flutter_map + OpenStreetMap · geolocator · cached_network_image · url_launcher · share_plus · shared_preferences
 
 ## Notes
 
 - **Sample data.** All businesses, phone numbers and ratings are fictional. Streets and coordinates are real, and each pin was checked by reverse geocoding to make sure it sits on the named street. Phone numbers use an unassigned Lagos range, so tapping Call can never reach a real person.
 - **Photos** are from [Unsplash](https://unsplash.com) and are requested at the size they're displayed.
+- **Firestore region.** The database is in `nam5` (US multi-region) because the CLI created it automatically on first deploy. A production app for Lagos would use a European region such as `europe-west2` for lower latency.
 - **Map tiles** are © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), used within the [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) for low-volume apps. A production release should switch to a commercial tile provider.

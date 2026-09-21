@@ -1,0 +1,34 @@
+{
+    "firestore": {
+        "rules": "firestore.rules",
+        "indexes": "firestore.indexes.json"
+    },
+    "flutter": {
+        "platforms": {
+            "android": {
+                "default": {
+                    "projectId": "spotly-lagos",
+                    "appId": "1:1031177150087:android:d6507dcf3c9c3c53a82222",
+                    "fileOutput": "android/app/google-services.json"
+                }
+            },
+            "ios": {
+                "default": {
+                    "projectId": "spotly-lagos",
+                    "appId": "1:1031177150087:ios:1b2acb359113742da82222",
+                    "uploadDebugSymbols": false,
+                    "fileOutput": "ios/Runner/GoogleService-Info.plist"
+                }
+            },
+            "dart": {
+                "lib/firebase_options.dart": {
+                    "projectId": "spotly-lagos",
+                    "configurations": {
+                        "android": "1:1031177150087:android:d6507dcf3c9c3c53a82222",
+                        "ios": "1:1031177150087:ios:1b2acb359113742da82222"
+                    }
+                }
+            }
+        }
+    }
+}

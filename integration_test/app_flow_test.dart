@@ -1,6 +1,7 @@
 import 'package:assessment_app/features/places/presentation/common/place_card.dart';
 import 'package:assessment_app/features/places/presentation/map/widgets/place_marker.dart';
 import 'package:assessment_app/main.dart' as app;
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
@@ -36,6 +37,13 @@ void main() {
     await (await SharedPreferences.getInstance()).clear();
     await app.main();
     await wait(tester, 5000);
+
+    // The places came from Firestore (and are now in its offline cache),
+    // not from the bundled fallback.
+    final cached = await FirebaseFirestore.instance
+        .collection('places')
+        .get(const GetOptions(source: Source.cache));
+    expect(cached.docs, hasLength(42));
     await shot(tester, '01-map-light');
 
     // Filter to salons and preview one.

@@ -1,0 +1,16 @@
+rules_version = '2';
+
+// Places are public, read-only reference data. Nothing can be written from
+// a client; the catalogue is managed with tool/seed_firestore.dart.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /places/{placeId} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
