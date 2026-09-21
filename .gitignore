@@ -43,3 +43,6 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Raw integration-test screenshots (compressed copies live in docs/screenshots)
+/screenshots/

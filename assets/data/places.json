@@ -1,0 +1,1509 @@
+{
+  "places": [
+    {
+      "id": "crown-and-coils",
+      "name": "Crown & Coils Studio",
+      "category": "salon",
+      "location": {
+        "lat": 6.4478,
+        "lng": 3.47414
+      },
+      "address": "14 Admiralty Way",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.8,
+      "reviewCount": 312,
+      "phone": "+234 1 000 0001",
+      "description": "A calm, bright studio for natural hair. Known for neat knotless braids, loc retwists and wash-and-go styling, with a separate corner for kids.",
+      "tags": [
+        "Knotless braids",
+        "Locs",
+        "Silk press",
+        "Natural hair",
+        "Kids' styles"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1763048208932-cbe149724374",
+        "https://images.unsplash.com/photo-1702236242829-a34c39814f31",
+        "https://images.unsplash.com/photo-1623171678074-1b04ff0e694f"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "12:00-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "the-fade-room",
+      "name": "The Fade Room",
+      "category": "salon",
+      "location": {
+        "lat": 6.4299,
+        "lng": 3.419
+      },
+      "address": "22 Adeola Odeku Street",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.7,
+      "reviewCount": 540,
+      "phone": "+234 1 000 0002",
+      "description": "A classic barbershop with a modern edge. Precision fades, beard sculpting and hot towel shaves, with Afrobeats always on.",
+      "tags": [
+        "Skin fades",
+        "Beard sculpting",
+        "Hot towel shave",
+        "Walk-ins"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1585747860715-2ba37e788b70",
+        "https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5",
+        "https://images.unsplash.com/photo-1702865272115-5afdbae975af"
+      ],
+      "hours": [
+        "09:00-21:00",
+        "09:00-21:00",
+        "09:00-21:00",
+        "09:00-21:00",
+        "09:00-21:00",
+        "09:00-21:00",
+        "13:00-19:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "adunni-beauty-lounge",
+      "name": "Adunni Beauty Lounge",
+      "category": "salon",
+      "location": {
+        "lat": 6.5791,
+        "lng": 3.3528
+      },
+      "address": "9 Adeyemo Alakija Street",
+      "area": "Ikeja GRA",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 198,
+      "phone": "+234 1 000 0003",
+      "description": "A full-service beauty lounge for owambe and bridal glam: wig installs, lashes, makeup and gele tying, all in one visit.",
+      "tags": [
+        "Bridal makeup",
+        "Lashes",
+        "Wig installs",
+        "Gele tying"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1761839256791-6a93f89fb8b0",
+        "https://images.unsplash.com/photo-1761839256840-7780a45b85dc",
+        "https://images.unsplash.com/photo-1672257493461-704902362c1d"
+      ],
+      "hours": [
+        null,
+        "09:00-19:00",
+        "09:00-19:00",
+        "09:00-19:00",
+        "09:00-19:00",
+        "09:00-19:00",
+        "09:00-19:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "polished-nail-bar",
+      "name": "Polished Nail Bar",
+      "category": "salon",
+      "location": {
+        "lat": 6.44398,
+        "lng": 3.40835
+      },
+      "address": "41 Awolowo Road",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 164,
+      "phone": "+234 1 000 0004",
+      "description": "A small, spotless nail bar with a long list of gel colours and patient technicians who take nail art seriously.",
+      "tags": [
+        "Gel manicure",
+        "Acrylics",
+        "Pedicure",
+        "Nail art"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1632345031435-8727f6897d53",
+        "https://images.unsplash.com/photo-1623171678074-1b04ff0e694f"
+      ],
+      "hours": [
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        null
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "kinks-and-twists",
+      "name": "Kinks & Twists",
+      "category": "salon",
+      "location": {
+        "lat": 6.5082,
+        "lng": 3.3772
+      },
+      "address": "12 Sawyer Street",
+      "area": "Yaba",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 287,
+      "phone": "+234 1 000 0005",
+      "description": "Affordable braiding close to the Yaba tech corridor. Popular with students, so book ahead on Fridays and Saturdays.",
+      "tags": [
+        "Cornrows",
+        "Box braids",
+        "Student prices",
+        "Twists"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1702236242829-a34c39814f31",
+        "https://images.unsplash.com/photo-1763048208932-cbe149724374"
+      ],
+      "hours": [
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "13:00-18:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "sharp-edge-barbers",
+      "name": "Sharp Edge Barbers",
+      "category": "salon",
+      "location": {
+        "lat": 6.4938,
+        "lng": 3.3571
+      },
+      "address": "63 Adeniran Ogunsanya Street",
+      "area": "Surulere",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 221,
+      "phone": "+234 1 000 0006",
+      "description": "A busy neighbourhood barbershop with quick service, fair prices and match-day banter.",
+      "tags": [
+        "Haircuts",
+        "Dye & waves",
+        "Kids' cuts",
+        "Walk-ins"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1693755807658-17ce5331aacb",
+        "https://images.unsplash.com/photo-1702865272115-5afdbae975af",
+        "https://images.unsplash.com/photo-1585747860715-2ba37e788b70"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "12:00-20:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "glow-haven-spa",
+      "name": "Glow Haven Spa & Salon",
+      "category": "salon",
+      "location": {
+        "lat": 6.44162,
+        "lng": 3.53075
+      },
+      "address": "7 Chevron Drive",
+      "area": "Lekki",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 143,
+      "phone": "+234 1 000 0007",
+      "description": "Part spa, part salon. Unwind with a deep-tissue massage or facial while your treatment sets.",
+      "tags": [
+        "Massage",
+        "Facials",
+        "Hair treatments",
+        "Couples packages"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1672257493461-704902362c1d",
+        "https://images.unsplash.com/photo-1761839256791-6a93f89fb8b0",
+        "https://images.unsplash.com/photo-1632345031435-8727f6897d53"
+      ],
+      "hours": [
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "mama-tees-kitchen",
+      "name": "Mama Tee's Kitchen",
+      "category": "eatery",
+      "location": {
+        "lat": 6.5041,
+        "lng": 3.3791
+      },
+      "address": "5 Industrial Street",
+      "area": "Yaba",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 890,
+      "phone": "+234 1 000 0008",
+      "description": "A no-frills buka serving some of the best amala and ewedu in Yaba. Arrive before 1 PM or queue with the lunch crowd.",
+      "tags": [
+        "Amala & ewedu",
+        "Efo riro",
+        "Assorted meat",
+        "Takeaway"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1763048443535-1243379234e2",
+        "https://images.unsplash.com/photo-1665332195309-9d75071138f0"
+      ],
+      "hours": [
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "10:00-17:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "ember-and-smoke",
+      "name": "Ember & Smoke Grill",
+      "category": "eatery",
+      "location": {
+        "lat": 6.4284,
+        "lng": 3.4236
+      },
+      "address": "28 Akin Adesola Street",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.7,
+      "reviewCount": 620,
+      "phone": "+234 1 000 0009",
+      "description": "A lively grill house with open flames, suya-spiced everything and a cocktail bar that stays busy past midnight at weekends.",
+      "tags": [
+        "Suya platter",
+        "Grilled fish",
+        "Cocktails",
+        "Late night"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1583946193644-49fe1fe958cf",
+        "https://images.unsplash.com/photo-1784902540562-9b048bde9ace",
+        "https://images.unsplash.com/photo-1570560258879-af7f8e1447ac"
+      ],
+      "hours": [
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-01:00",
+        "12:00-01:00",
+        "12:00-22:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "the-jollof-co",
+      "name": "The Jollof Co.",
+      "category": "eatery",
+      "location": {
+        "lat": 6.4433,
+        "lng": 3.4669
+      },
+      "address": "3 Charles Ifeanyi Street",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 1104,
+      "phone": "+234 1 000 0010",
+      "description": "Smoky party jollof, cooked the way it is at weddings. Pair it with peppered turkey and a generous side of dodo.",
+      "tags": [
+        "Party jollof",
+        "Fried rice",
+        "Dodo",
+        "Delivery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1665332195309-9d75071138f0",
+        "https://images.unsplash.com/photo-1635360065676-f47200966893",
+        "https://images.unsplash.com/photo-1665334217407-6688e6941a47"
+      ],
+      "hours": [
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "buka-republic",
+      "name": "Buka Republic",
+      "category": "eatery",
+      "location": {
+        "lat": 6.60143,
+        "lng": 3.35206
+      },
+      "address": "52 Allen Avenue",
+      "area": "Ikeja",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 756,
+      "phone": "+234 1 000 0011",
+      "description": "A clean, fast canteen for Ikeja office workers. Pounded yam and egusi, ofada rice with ayamase, and a proper Nigerian breakfast from 7 AM.",
+      "tags": [
+        "Pounded yam",
+        "Egusi",
+        "Ofada rice",
+        "Breakfast"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1763048443535-1243379234e2",
+        "https://images.unsplash.com/photo-1665334217407-6688e6941a47"
+      ],
+      "hours": [
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        null
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "terra-kitchen",
+      "name": "Terra Kitchen",
+      "category": "eatery",
+      "location": {
+        "lat": 6.4552,
+        "lng": 3.4402
+      },
+      "address": "16 Gerrard Road",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.8,
+      "reviewCount": 389,
+      "phone": "+234 1 000 0012",
+      "description": "Contemporary Nigerian fine dining. Seasonal tasting menus reinvent classics like ofe owerri and asun with fine-dining technique.",
+      "tags": [
+        "Tasting menu",
+        "Wine list",
+        "Date night",
+        "Reservations"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1729394405014-0a6bd5c63c59",
+        "https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7",
+        "https://images.unsplash.com/photo-1763219802762-1d34ee0907c5"
+      ],
+      "hours": [
+        null,
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00",
+        "12:00-23:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "suya-spot",
+      "name": "Suya Spot",
+      "category": "eatery",
+      "location": {
+        "lat": 6.4876,
+        "lng": 3.3552
+      },
+      "address": "90 Eric Moore Road",
+      "area": "Surulere",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 932,
+      "phone": "+234 1 000 0013",
+      "description": "The smoke tells you you're close. Beef suya, chicken and kilishi, freshly grilled from evening into the early hours.",
+      "tags": [
+        "Beef suya",
+        "Kilishi",
+        "Asun",
+        "Open late"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1788227372897-49ec292a9406",
+        "https://images.unsplash.com/photo-1784902540562-9b048bde9ace"
+      ],
+      "hours": [
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "harbour-plates",
+      "name": "Harbour Plates",
+      "category": "eatery",
+      "location": {
+        "lat": 6.434,
+        "lng": 3.4475
+      },
+      "address": "2 Oba Idowu Abiodun Oniru Road",
+      "area": "Oniru",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 275,
+      "phone": "+234 1 000 0014",
+      "description": "A big, breezy dining room with a seafood-heavy menu. Good for group lunches and slow weekend brunch.",
+      "tags": [
+        "Seafood",
+        "Brunch",
+        "Outdoor seating",
+        "Groups"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1570560258879-af7f8e1447ac",
+        "https://images.unsplash.com/photo-1729394405518-eaf2a0203aa7",
+        "https://images.unsplash.com/photo-1635360065676-f47200966893"
+      ],
+      "hours": [
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "medcare-pharmacy",
+      "name": "MedCare Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.4466,
+        "lng": 3.4768
+      },
+      "address": "33 Onoh Ebhomenye Street",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 211,
+      "phone": "+234 1 000 0015",
+      "description": "A round-the-clock pharmacy with licensed pharmacists on every shift, free blood pressure checks and same-day delivery in Lekki.",
+      "tags": [
+        "24 hours",
+        "Prescriptions",
+        "BP checks",
+        "Delivery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1580281657527-47f249e8f4df",
+        "https://images.unsplash.com/photo-1671108503276-1d3d5ab23a3a"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ]
+    },
+    {
+      "id": "wellspring-pharmacy",
+      "name": "Wellspring Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.4297,
+        "lng": 3.4295
+      },
+      "address": "12 Oyin Jolayemi Street",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 167,
+      "phone": "+234 1 000 0016",
+      "description": "A friendly, well-stocked pharmacy that accepts most HMOs. Also offers travel vaccinations and a dermatologist-picked skincare range.",
+      "tags": [
+        "Prescriptions",
+        "Vaccinations",
+        "Skincare",
+        "HMO accepted"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1576091358783-a212ec293ff3",
+        "https://images.unsplash.com/photo-1696861308115-54a5e5a134b0"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "10:00-20:00"
+      ]
+    },
+    {
+      "id": "citycure-pharmacy",
+      "name": "CityCure Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.5846,
+        "lng": 3.36534
+      },
+      "address": "71 Opebi Road",
+      "area": "Ikeja",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 302,
+      "phone": "+234 1 000 0017",
+      "description": "An always-open Opebi landmark with a small diagnostics corner for malaria and blood sugar tests, and a large baby-care aisle.",
+      "tags": [
+        "24 hours",
+        "Diagnostics",
+        "Baby care",
+        "Prescriptions"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1642055514517-7b52288890ec",
+        "https://images.unsplash.com/photo-1696861286643-341a8d7a79e9"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ]
+    },
+    {
+      "id": "greenleaf-chemist",
+      "name": "Greenleaf Chemist",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.5068,
+        "lng": 3.3761
+      },
+      "address": "4 Raymond Street",
+      "area": "Yaba",
+      "city": "Lagos",
+      "rating": 4.2,
+      "reviewCount": 98,
+      "phone": "+234 1 000 0018",
+      "description": "A compact neighbourhood chemist for everyday medicines, first-aid supplies and quick advice from the pharmacist.",
+      "tags": [
+        "Over the counter",
+        "First aid",
+        "Student friendly"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1671108503276-1d3d5ab23a3a",
+        "https://images.unsplash.com/photo-1631549916768-4119b2e5f926"
+      ],
+      "hours": [
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "12:00-19:00"
+      ]
+    },
+    {
+      "id": "ikoyi-health-pharmacy",
+      "name": "Ikoyi Health Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.4519,
+        "lng": 3.4335
+      },
+      "address": "8 Thompson Avenue",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.7,
+      "reviewCount": 145,
+      "phone": "+234 1 000 0019",
+      "description": "Private consultation rooms, repeat-prescription management for chronic conditions and a good range of vitamins and supplements.",
+      "tags": [
+        "Consultations",
+        "Chronic care",
+        "Supplements",
+        "Delivery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1739289696449-cba3a5ef085d",
+        "https://images.unsplash.com/photo-1586015555751-63bb77f4322a"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "surulere-family-pharmacy",
+      "name": "Surulere Family Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.51007,
+        "lng": 3.36294
+      },
+      "address": "27 Ojuelegba Road",
+      "area": "Surulere",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 120,
+      "phone": "+234 1 000 0020",
+      "description": "A family-run pharmacy that has served Surulere households for over a decade. They know their regulars by name.",
+      "tags": [
+        "Family health",
+        "Prescriptions",
+        "Baby care"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1696861308115-54a5e5a134b0",
+        "https://images.unsplash.com/photo-1580281657527-47f249e8f4df"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        null
+      ]
+    },
+    {
+      "id": "maryland-meds",
+      "name": "Maryland Meds",
+      "category": "pharmacy",
+      "location": {
+        "lat": 6.57576,
+        "lng": 3.37027
+      },
+      "address": "140 Ikorodu Road",
+      "area": "Maryland",
+      "city": "Lagos",
+      "rating": 4.1,
+      "reviewCount": 88,
+      "phone": "+234 1 000 0021",
+      "description": "A 24-hour pharmacy on Ikorodu Road with drive-by pickup for pre-ordered prescriptions, so you don't need to park.",
+      "tags": [
+        "24 hours",
+        "Prescriptions",
+        "Drive-by pickup"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1696861286643-341a8d7a79e9",
+        "https://images.unsplash.com/photo-1642055514517-7b52288890ec"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ]
+    },
+    {
+      "id": "bean-there-cafe",
+      "name": "Bean There Café",
+      "category": "cafe",
+      "location": {
+        "lat": 6.5101,
+        "lng": 3.3776
+      },
+      "address": "96 Herbert Macaulay Way",
+      "area": "Yaba",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 402,
+      "phone": "+234 1 000 0022",
+      "description": "Yaba's unofficial co-working space. Fast Wi-Fi, plenty of sockets, backup power and a cold brew worth the trip.",
+      "tags": [
+        "Fast Wi-Fi",
+        "Power outlets",
+        "Cold brew",
+        "Remote work"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1556742393-d75f468bfcb0",
+        "https://images.unsplash.com/photo-1564327367919-cb377ea6a88f",
+        "https://images.unsplash.com/photo-1507915135761-41a0a222c709"
+      ],
+      "hours": [
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "09:00-21:00",
+        "09:00-21:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "kofi-and-crumbs",
+      "name": "Kofi & Crumbs",
+      "category": "cafe",
+      "location": {
+        "lat": 6.45382,
+        "lng": 3.47011
+      },
+      "address": "19 Admiralty Road",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.7,
+      "reviewCount": 518,
+      "phone": "+234 1 000 0023",
+      "description": "A bakery café where the croissants come out of the oven every morning. The chin-chin-crusted banana bread sells out by noon.",
+      "tags": [
+        "Fresh pastries",
+        "Croissants",
+        "Brunch",
+        "Kid friendly"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1711672284661-bd70e38f31b2",
+        "https://images.unsplash.com/photo-1597528662465-55ece5734101",
+        "https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d"
+      ],
+      "hours": [
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00",
+        "07:00-20:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "the-roastery",
+      "name": "The Roastery",
+      "category": "cafe",
+      "location": {
+        "lat": 6.4491,
+        "lng": 3.4228
+      },
+      "address": "55 Murtala Muhammed Drive",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.8,
+      "reviewCount": 276,
+      "phone": "+234 1 000 0024",
+      "description": "A specialty roaster brewing single-origin Nigerian and Ethiopian beans. Grab a pour-over and a bag of freshly roasted beans.",
+      "tags": [
+        "Specialty coffee",
+        "Pour over",
+        "Beans to go",
+        "Quiet"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1508766917616-d22f3f1eea14",
+        "https://images.unsplash.com/photo-1507915135761-41a0a222c709",
+        "https://images.unsplash.com/photo-1676277571294-f0bcdb8dc7c8"
+      ],
+      "hours": [
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "garden-brew",
+      "name": "Garden Brew",
+      "category": "cafe",
+      "location": {
+        "lat": 6.4318,
+        "lng": 3.4262
+      },
+      "address": "6 Amodu Tijani Close",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 330,
+      "phone": "+234 1 000 0025",
+      "description": "A café in a plant-filled courtyard, green in the middle of VI. Good for long brunches and afternoon smoothies.",
+      "tags": [
+        "Courtyard",
+        "Brunch",
+        "Smoothies",
+        "Pet friendly"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1600093463592-8e36ae95ef56",
+        "https://images.unsplash.com/photo-1564327367919-cb377ea6a88f"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "crumb-and-co",
+      "name": "Crumb & Co. Bakery",
+      "category": "cafe",
+      "location": {
+        "lat": 6.59629,
+        "lng": 3.34719
+      },
+      "address": "31 Toyin Street",
+      "area": "Ikeja",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 215,
+      "phone": "+234 1 000 0026",
+      "description": "Hot meat pies, sausage rolls and celebration cakes to order. An early-morning favourite on Toyin Street.",
+      "tags": [
+        "Meat pies",
+        "Sausage rolls",
+        "Cakes",
+        "Takeaway"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1643944471768-2d2eac3afb6d",
+        "https://images.unsplash.com/photo-1597528662465-55ece5734101"
+      ],
+      "hours": [
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "08:00-16:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "latte-lane",
+      "name": "Latte Lane",
+      "category": "cafe",
+      "location": {
+        "lat": 6.5546,
+        "lng": 3.3874
+      },
+      "address": "11 Ayodele Okeowo Street",
+      "area": "Gbagada",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 140,
+      "phone": "+234 1 000 0027",
+      "description": "A cosy neighbourhood café with excellent latte art, good toasties and a quiet upstairs room for studying.",
+      "tags": [
+        "Latte art",
+        "Study spot",
+        "Sandwiches"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1579265898841-79c7890d69cf",
+        "https://images.unsplash.com/photo-1510083300914-5ffac797d9d2",
+        "https://images.unsplash.com/photo-1565650839149-2c48a094196c"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        null
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "morning-pour",
+      "name": "Morning Pour",
+      "category": "cafe",
+      "location": {
+        "lat": 6.4386,
+        "lng": 3.4912
+      },
+      "address": "4 Kusenla Road",
+      "area": "Ikate",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 96,
+      "phone": "+234 1 000 0028",
+      "description": "Built for the commute: open from 6:30 AM with a drive-through window and iced coffee ready in two minutes.",
+      "tags": [
+        "Early opening",
+        "Drive-through",
+        "Iced coffee"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1565650839149-2c48a094196c",
+        "https://images.unsplash.com/photo-1676277571294-f0bcdb8dc7c8",
+        "https://images.unsplash.com/photo-1579265898841-79c7890d69cf"
+      ],
+      "hours": [
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "freshmart-lekki",
+      "name": "FreshMart Lekki",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.4457,
+        "lng": 3.4795
+      },
+      "address": "50 Oyibo Adjarho Street",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 1230,
+      "phone": "+234 1 000 0029",
+      "description": "A large supermarket with a great fresh produce section, an in-store bakery and plenty of parking. Delivery in 90 minutes across Lekki.",
+      "tags": [
+        "Fresh produce",
+        "Bakery",
+        "Home delivery",
+        "Parking"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1670684684445-a4504dca0bbc",
+        "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8",
+        "https://images.unsplash.com/photo-1631856954655-966f97d809de"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "island-grocers",
+      "name": "Island Grocers",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.4274,
+        "lng": 3.416
+      },
+      "address": "17 Ologun Agbeje Street",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 640,
+      "phone": "+234 1 000 0030",
+      "description": "The go-to spot on the island for imported pantry staples, a good wine selection and a deli counter with fresh cold cuts.",
+      "tags": [
+        "Imported goods",
+        "Wine & spirits",
+        "Deli"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1760776140488-32fcfab4066a",
+        "https://images.unsplash.com/photo-1707729509134-fe9ad5f6a5b6"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00"
+      ]
+    },
+    {
+      "id": "daily-needs-supermarket",
+      "name": "Daily Needs Supermarket",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.59665,
+        "lng": 3.34023
+      },
+      "address": "85 Obafemi Awolowo Way",
+      "area": "Ikeja",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 812,
+      "phone": "+234 1 000 0031",
+      "description": "Everything for the monthly shopping run: bulk rice and oil, household essentials and provisions at prices that beat the open market.",
+      "tags": [
+        "Bulk buys",
+        "Household",
+        "Provisions",
+        "POS"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1631856954655-966f97d809de",
+        "https://images.unsplash.com/photo-1685640206182-c51b8aa9b686"
+      ],
+      "hours": [
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "10:00-20:00"
+      ]
+    },
+    {
+      "id": "ikoyi-pantry",
+      "name": "Ikoyi Pantry",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.454,
+        "lng": 3.4371
+      },
+      "address": "3 Lugard Avenue",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 298,
+      "phone": "+234 1 000 0032",
+      "description": "A boutique grocer with organic produce from farms in Ogun and Oyo, an in-house butcher and a well-labelled free-from aisle.",
+      "tags": [
+        "Organic",
+        "Gluten free",
+        "Local farms",
+        "Butcher"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1767364084218-a18f3ea7e93f",
+        "https://images.unsplash.com/photo-1521566652839-697aa473761a"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00"
+      ]
+    },
+    {
+      "id": "valueplus-mart",
+      "name": "ValuePlus Mart",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.4903,
+        "lng": 3.3587
+      },
+      "address": "44 Ishau Adewale Street",
+      "area": "Surulere",
+      "city": "Lagos",
+      "rating": 4.2,
+      "reviewCount": 505,
+      "phone": "+234 1 000 0033",
+      "description": "Budget-friendly aisles with frozen food, toiletries and weekly deals posted by the entrance.",
+      "tags": [
+        "Everyday low prices",
+        "Frozen foods",
+        "Toiletries"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1631856956334-35db20cb7748",
+        "https://images.unsplash.com/photo-1754398006556-bedbc3b74bf5"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "12:00-19:00"
+      ]
+    },
+    {
+      "id": "gbagada-groceries",
+      "name": "Gbagada Groceries",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.54795,
+        "lng": 3.39987
+      },
+      "address": "19 Diya Street",
+      "area": "Gbagada",
+      "city": "Lagos",
+      "rating": 4.1,
+      "reviewCount": 210,
+      "phone": "+234 1 000 0034",
+      "description": "A tidy neighbourhood supermarket for quick top-up shops: fresh bread, cold drinks and all the basics.",
+      "tags": [
+        "Provisions",
+        "Fresh bread",
+        "Drinks"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1754398006556-bedbc3b74bf5",
+        "https://images.unsplash.com/photo-1670684684445-a4504dca0bbc"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        null
+      ]
+    },
+    {
+      "id": "ajah-superstore",
+      "name": "Ajah Superstore",
+      "category": "supermarket",
+      "location": {
+        "lat": 6.4516,
+        "lng": 3.55454
+      },
+      "address": "Lekki-Epe Expressway, Ikota",
+      "area": "Ajah",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 377,
+      "phone": "+234 1 000 0035",
+      "description": "A large-format store on the expressway with groceries, small appliances and a big fresh produce hall. Easy parking.",
+      "tags": [
+        "Large format",
+        "Electronics",
+        "Fresh produce",
+        "Parking"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1685640206182-c51b8aa9b686",
+        "https://images.unsplash.com/photo-1583258292688-d0213dc5a3a8"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "ironworks-gym",
+      "name": "IronWorks Gym",
+      "category": "gym",
+      "location": {
+        "lat": 6.4418,
+        "lng": 3.4745
+      },
+      "address": "8 Hakeem Dickson Road",
+      "area": "Lekki Phase 1",
+      "city": "Lagos",
+      "rating": 4.7,
+      "reviewCount": 455,
+      "phone": "+234 1 000 0036",
+      "description": "A serious strength gym with calibrated plates, deadlift platforms and coaches who program for powerlifting and hypertrophy.",
+      "tags": [
+        "Free weights",
+        "Powerlifting",
+        "Personal training",
+        "Day passes"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1623874514711-0f321325f318",
+        "https://images.unsplash.com/photo-1676109829011-a9f0f3e40f00",
+        "https://images.unsplash.com/photo-1609674248079-e9242e48c06b"
+      ],
+      "hours": [
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "07:00-20:00",
+        "08:00-16:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "pulse-fitness-club",
+      "name": "Pulse Fitness Club",
+      "category": "gym",
+      "location": {
+        "lat": 6.4263,
+        "lng": 3.4212
+      },
+      "address": "1 Abimbola Awoniyi Close",
+      "area": "Victoria Island",
+      "city": "Lagos",
+      "rating": 4.6,
+      "reviewCount": 380,
+      "phone": "+234 1 000 0037",
+      "description": "A premium club with a packed class timetable, from spin and HIIT to dance cardio, followed by the sauna and steam room.",
+      "tags": [
+        "Spin classes",
+        "HIIT",
+        "Sauna",
+        "Towel service"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1761971975769-97e598bf526b",
+        "https://images.unsplash.com/photo-1761971976282-b2bb051a5474",
+        "https://images.unsplash.com/photo-1757924284732-4189190321cf"
+      ],
+      "hours": [
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "07:00-18:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "body-lab-ikeja",
+      "name": "Body Lab Ikeja",
+      "category": "gym",
+      "location": {
+        "lat": 6.5823,
+        "lng": 3.3487
+      },
+      "address": "15 Ladoke Akintola Street",
+      "area": "Ikeja GRA",
+      "city": "Lagos",
+      "rating": 4.5,
+      "reviewCount": 290,
+      "phone": "+234 1 000 0038",
+      "description": "A well-equipped mainland gym offering monthly body-composition scans so you can track progress beyond the mirror.",
+      "tags": [
+        "Cardio",
+        "Strength",
+        "Body composition scans"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1671970922029-0430d2ae122c",
+        "https://images.unsplash.com/photo-1741156229623-da94e6d7977d"
+      ],
+      "hours": [
+        "05:30-21:30",
+        "05:30-21:30",
+        "05:30-21:30",
+        "05:30-21:30",
+        "05:30-21:30",
+        "07:00-19:00",
+        "09:00-15:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "yaba-strength-co",
+      "name": "Yaba Strength Co.",
+      "category": "gym",
+      "location": {
+        "lat": 6.5122,
+        "lng": 3.3801
+      },
+      "address": "3 Harvey Road",
+      "area": "Yaba",
+      "city": "Lagos",
+      "rating": 4.4,
+      "reviewCount": 180,
+      "phone": "+234 1 000 0039",
+      "description": "A community box with daily group workouts, Olympic lifting clinics and a whiteboard leaderboard to compete on.",
+      "tags": [
+        "CrossFit style",
+        "Group WODs",
+        "Olympic lifting"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1534258936925-c58bed479fcb",
+        "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        null
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "skyline-wellness",
+      "name": "Skyline Wellness",
+      "category": "gym",
+      "location": {
+        "lat": 6.4469,
+        "lng": 3.4311
+      },
+      "address": "10 Rumens Road",
+      "area": "Ikoyi",
+      "city": "Lagos",
+      "rating": 4.8,
+      "reviewCount": 164,
+      "phone": "+234 1 000 0040",
+      "description": "A light-filled studio for reformer Pilates, yoga and recovery sessions, with floor-to-ceiling views over the city.",
+      "tags": [
+        "Pilates",
+        "Yoga",
+        "Recovery",
+        "City views"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1758448756350-3d0eec02ba37",
+        "https://images.unsplash.com/photo-1757924284732-4189190321cf"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "sweat-box-surulere",
+      "name": "Sweat Box Surulere",
+      "category": "gym",
+      "location": {
+        "lat": 6.50133,
+        "lng": 3.35058
+      },
+      "address": "5 Adelabu Street",
+      "area": "Surulere",
+      "city": "Lagos",
+      "rating": 4.2,
+      "reviewCount": 230,
+      "phone": "+234 1 000 0041",
+      "description": "A no-nonsense gym with affordable memberships, a boxing ring and evening circuit classes that fill up fast.",
+      "tags": [
+        "Affordable",
+        "Boxing",
+        "Circuit training"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1778828494354-9b717d36dc99",
+        "https://images.unsplash.com/photo-1609674248079-e9242e48c06b"
+      ],
+      "hours": [
+        "06:00-22:00",
+        "06:00-22:00",
+        "06:00-22:00",
+        "06:00-22:00",
+        "06:00-22:00",
+        "06:00-22:00",
+        "10:00-18:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "fithub-247",
+      "name": "FitHub 24/7",
+      "category": "gym",
+      "location": {
+        "lat": 6.4423,
+        "lng": 3.51601
+      },
+      "address": "22 Agungi Ajiran Road",
+      "area": "Agungi",
+      "city": "Lagos",
+      "rating": 4.3,
+      "reviewCount": 201,
+      "phone": "+234 1 000 0042",
+      "description": "Train whenever suits you. Key-card access around the clock, with staffed hours from 6 AM to 10 PM.",
+      "tags": [
+        "24 hours",
+        "Key-card access",
+        "Cardio",
+        "Free weights"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1676109829011-a9f0f3e40f00",
+        "https://images.unsplash.com/photo-1671970922029-0430d2ae122c"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ],
+      "priceLevel": 2
+    }
+  ]
+}
