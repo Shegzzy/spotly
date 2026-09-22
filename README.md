@@ -49,7 +49,16 @@ The images in `docs/screenshots` are compressed copies of that run.
 - **Fallback.** `FallbackPlaceRepository` wraps Firestore and switches to the bundled data if Firestore fails, times out (8 s) or returns nothing. The map is never empty because of the backend.
 - **Security rules.** `firestore.rules` makes `places` public and read-only, and denies everything else. Clients can't write anything.
 - **Seeding.** `dart run tool/seed_firestore.dart` uploads `assets/data/places.json` and removes stale documents. Because clients can't write, it deploys temporary rules that allow writes to `places` only, for ten minutes. It then always redeploys the locked rules, even if the upload fails.
-- **Using your own project.** Run `flutterfire configure`, then the seed script, then `firebase deploy --only firestore:rules`.
+- **Using your own project.** Run `flutterfire configure`, then the seed script, then `firebase deploy --only firestore:rules`. `DATA_SOURCE=bundled` skips Firebase entirely, including push.
+
+## Push notifications
+
+- **Opt in, per city.** Turning on **New place alerts** in the city picker asks for notification permission at that moment, not at launch. The app then follows the selected city's FCM topic (`places-lagos` or `places-abuja`) and switches topics when you switch cities.
+- **Tapping one opens the place**, whether the app was in the background or closed. From a cold start the splash hands straight over to the details screen. The map behind it moves to the place's city, so going back shows where it is.
+- **In the app**, where the system doesn't show notifications, they slide in as a banner that opens the place or can be swiped away.
+- **Android** works out of the box, with the Android 13+ permission prompt, a monochrome status-bar pin and a "New places" notification channel.
+- **iOS** is wired up but needs the Push Notifications capability and an APNs key, which require a paid Apple Developer account. They're left out so anyone can build the project. Without them there's no APNs token, so the switch says notifications aren't available in this build instead of asking for a permission it can't use. To turn iOS on, add the Push Notifications capability to the Runner target in Xcode, upload an APNs auth key under Firebase console → Project settings → Cloud Messaging, and rebuild. No code changes are needed.
+- **Sending one.** `dart run tool/send_push.dart --place zuri-hair-atelier` sends "New in Abuja: Zuri Hair Atelier" to that place's city topic, authorised with `gcloud auth print-access-token` (or pass `--access-token`). The Firebase console works too: create a notification that targets the topic `places-abuja` and add the custom data `placeId` with a place's id.
 
 The Firebase config files in the repo (`firebase_options.dart`, `google-services.json`, `GoogleService-Info.plist`) contain public project identifiers, not secrets. Access is governed by the security rules.
 
@@ -67,6 +76,7 @@ lib/
       application/   providers: places, selected city, filter, search results, selection, clock
       presentation/  map/ (screen, pins, clustering, carousel, search) · details/ · common/
     location/      LocationService (geolocator) + UserLocation provider
+    notifications/ PushService (FCM topics per city), alerts toggle, in-app banner
     splash/        animated hand-off from the native launch screen
     settings/      persisted ThemeMode
 assets/data/places.json   sample data
@@ -75,11 +85,11 @@ assets/data/places.json   sample data
 - **The domain layer is plain Dart.** Search ranking and opening-hours logic are pure functions, so they're thoroughly unit tested.
 - **The data source can be swapped.** The UI only depends on `PlaceRepository`. `main.dart` picks Firestore with the bundled fallback, and tests inject fakes through a single provider override.
 - **Search runs on the device.** Firestore has no full-text search. With a city-sized dataset, fetching once and searching locally is instant and works offline. At larger scale it would move to a search service (Algolia, Typesense) with geohash queries.
-- **Testable seams.** The location service, repository, clock and map tiles are all providers, so tests swap in fakes and need no network or GPS.
+- **Testable seams.** The location service, repository, push service, clock and map tiles are all providers, so tests swap in fakes and need no network, GPS or Firebase.
 
 ## Tech
 
-Flutter 3.44 · Dart 3.12 · Cloud Firestore · flutter_riverpod 3 · go_router · flutter_map + OpenStreetMap · geolocator · cached_network_image · url_launcher · share_plus · shared_preferences
+Flutter 3.44 · Dart 3.12 · Cloud Firestore · Firebase Cloud Messaging · flutter_riverpod 3 · go_router · flutter_map + OpenStreetMap · geolocator · cached_network_image · url_launcher · share_plus · shared_preferences
 
 ## Notes
 

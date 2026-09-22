@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'core/constants.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/app_theme.dart';
+import 'features/notifications/presentation/push_handler.dart';
 import 'features/settings/theme_mode_controller.dart';
 
 class SpotlyApp extends ConsumerWidget {
@@ -19,6 +20,7 @@ class SpotlyApp extends ConsumerWidget {
       themeMode: ref.watch(themeModeProvider),
       themeAnimationDuration: const Duration(milliseconds: 350),
       routerConfig: ref.watch(routerProvider),
+      builder: (_, child) => PushHandler(child: child!),
     );
   }
 }

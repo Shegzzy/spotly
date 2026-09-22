@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import '../../../../notifications/push_providers.dart';
+import '../../../../notifications/push_service.dart';
 import '../../../application/place_providers.dart';
 import '../../../domain/city.dart';
 
@@ -13,11 +15,34 @@ Future<City?> showCityPicker(BuildContext context) {
   );
 }
 
-class _CityPicker extends ConsumerWidget {
+class _CityPicker extends ConsumerStatefulWidget {
   const _CityPicker();
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  ConsumerState<_CityPicker> createState() => _CityPickerState();
+}
+
+class _CityPickerState extends ConsumerState<_CityPicker> {
+  bool _busy = false;
+  PushAvailability? _problem;
+
+  Future<void> _setAlerts(bool enabled) async {
+    setState(() {
+      _busy = true;
+      _problem = null;
+    });
+    final result = await ref
+        .read(placeAlertsProvider.notifier)
+        .setEnabled(enabled);
+    if (!mounted) return;
+    setState(() {
+      _busy = false;
+      _problem = result == PushAvailability.enabled ? null : result;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
     final theme = Theme.of(context);
     final selected = ref.watch(selectedCityProvider);
     final userCity = ref.watch(userCityProvider);
@@ -43,6 +68,22 @@ class _CityPicker extends ConsumerWidget {
               isUserCity: city == userCity,
               onTap: () => Navigator.of(context).pop(city),
             ),
+          const Divider(height: 24, indent: 20, endIndent: 20),
+          SwitchListTile.adaptive(
+            contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+            secondary: const Icon(Icons.notifications_active_outlined),
+            title: const Text('New place alerts'),
+            subtitle: Text(switch (_problem) {
+              PushAvailability.denied =>
+                'Notifications are off for Spotly. Turn them on in Settings.',
+              PushAvailability.unavailable =>
+                'Notifications aren’t available in this build.',
+              _ =>
+                'Get a notification when a place opens in ${selected.label}.',
+            }),
+            value: ref.watch(placeAlertsProvider),
+            onChanged: _busy ? null : _setAlerts,
+          ),
         ],
       ),
     );

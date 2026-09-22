@@ -6,11 +6,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../core/constants.dart';
+import '../notifications/push_providers.dart';
 import '../places/application/place_providers.dart';
 
 /// Picks up exactly where the native launch screen leaves off (same colour,
 /// same logo at the same size and position), plays a short "pin drop"
-/// intro while places load, then hands over to the map.
+/// intro while places load, then hands over to the map, or to a place if a
+/// notification launched the app.
 class SplashScreen extends ConsumerStatefulWidget {
   const SplashScreen({super.key});
 
@@ -98,12 +100,20 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
         .read(placesProvider.future)
         .then<void>((_) {}, onError: (_) {})
         .timeout(SplashScreen._maxWait, onTimeout: () {});
+    final notification = ref.read(pushServiceProvider).launchNotification();
     if (reduceMotion) _controller.value = 1;
     final intro = reduceMotion
         ? Future<void>.value()
         : _controller.forward().orCancel.catchError((_) {});
     await Future.wait([intro, places]);
-    if (mounted) context.go('/');
+    final placeId = (await notification)?.placeId;
+    if (!mounted) return;
+    if (placeId == null) {
+      context.go('/');
+    } else {
+      selectCityOfPlace(ref, placeId);
+      context.go('/place/$placeId');
+    }
   }
 
   @override
