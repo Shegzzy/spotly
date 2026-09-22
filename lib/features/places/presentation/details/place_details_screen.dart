@@ -321,7 +321,6 @@ class _PlaceDetailsViewState extends ConsumerState<_PlaceDetailsView> {
                   MediaQuery.paddingOf(context).bottom + 24,
                 ),
                 child: Text(
-                  'Sample business listing for demo purposes. '
                   'Photos from Unsplash.',
                   textAlign: TextAlign.center,
                   style: theme.textTheme.bodySmall?.copyWith(
