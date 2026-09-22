@@ -106,9 +106,10 @@ void main() {
     await wait(tester);
     await tester.tap(find.text('Lagos'));
     await wait(tester);
+    await shot(tester, '11-city-picker-dark');
     await tester.tap(find.text('Abuja'));
     await wait(tester, 4000);
     expect(find.text('42 places in Abuja'), findsOneWidget);
-    await shot(tester, '11-abuja-dark');
+    await shot(tester, '12-abuja-dark');
   });
 }

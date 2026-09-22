@@ -4,9 +4,9 @@ Find salons, eateries, pharmacies, cafés, supermarkets and gyms in Lagos and Ab
 
 Spotly opens on a map centred on you, in whichever of the two cities you're in. You can search in plain words ("saloon", "jollof", "chemist") or tap a category, and each result shows up as a pin in its category's colour. Tap a pin to preview the place, then open the preview for full details: photos, opening hours, directions, call and share. The whole app has light and dark themes, including the map.
 
-| Map | Preview | Details | Dark mode |
-| --- | --- | --- | --- |
-| ![Map](docs/screenshots/01-map-light.jpg) | ![Preview](docs/screenshots/03-preview.jpg) | ![Details](docs/screenshots/04-details.jpg) | ![Dark](docs/screenshots/07-preview-dark.jpg) |
+| Map | Preview | Details | Cities | Abuja, dark |
+| --- | --- | --- | --- | --- |
+| ![Map](docs/screenshots/01-map-light.jpg) | ![Preview](docs/screenshots/03-preview.jpg) | ![Details](docs/screenshots/04-details.jpg) | ![City picker](docs/screenshots/11-city-picker-dark.jpg) | ![Abuja](docs/screenshots/12-abuja-dark.jpg) |
 
 ## Running it
 
@@ -22,7 +22,8 @@ flutter test          # unit and widget tests
 flutter analyze       # strict lints, zero issues
 
 # End-to-end on a simulator/emulator. Walks through search, preview,
-# details and dark mode, and writes screenshots to screenshots/
+# details, dark mode and switching to Abuja, and writes screenshots to
+# screenshots/
 flutter drive --driver=test_driver/integration_test.dart \
   --target=integration_test/app_flow_test.dart
 ```
