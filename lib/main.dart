@@ -13,6 +13,7 @@ import 'features/places/data/fallback_place_repository.dart';
 import 'features/places/data/firestore_place_repository.dart';
 import 'features/places/domain/place_repository.dart';
 import 'features/settings/theme_mode_controller.dart';
+import 'features/splash/splash_screen.dart';
 import 'firebase_options.dart';
 
 /// `firestore` (default) or `bundled`, e.g.
@@ -24,9 +25,12 @@ const _dataSource = String.fromEnvironment(
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final (preferences, repository) = await (
+  // The native launch screen stays up until the first frame, so do the
+  // startup work here rather than behind a loading state.
+  final (preferences, repository, _) = await (
     SharedPreferences.getInstance(),
     _createRepository(),
+    SplashScreen.precacheLogo(),
   ).wait;
 
   runApp(

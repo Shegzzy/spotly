@@ -38,6 +38,7 @@ The images in `docs/screenshots` are compressed copies of that run.
 - **Details screen.** Collapsing photo header with a hero transition, live open/closed status ("Closes soon · 9 PM"), highlights, a weekly hours table with today marked, a mini map, a photo gallery, and Directions / Call / Share / Copy address.
 - **Light and dark themes.** Follows the system setting until you use the toggle, then remembers your choice. The map tiles are recoloured on the device to match the theme.
 - **Location aware.** Centres on you when you're in Lagos and sorts results by distance. If you're outside Lagos it shows the Lagos sample data and tells you why. Denied permissions get a clear message and a link to Settings.
+- **Seamless launch.** The native launch screen hands off to a Flutter splash drawn at exactly the same size and position, which plays a short pin-drop intro while places load, then fades into the map. It waits for data for at most 2.6 s, and skips the animation when the system's reduce-motion setting is on.
 - **Every state is handled.** Loading, empty results (with a "Clear" action), load errors (with "Retry"), deep links to a place that doesn't exist, and Android back to dismiss a selection.
 - **Accurate hours.** Opening hours are evaluated in Lagos time (WAT, UTC+1) wherever the viewer is. Late-night windows that cross midnight (e.g. 17:00–02:00) and 24-hour places are handled.
 
@@ -65,6 +66,7 @@ lib/
       application/   providers: places, filter, search results, selection, clock
       presentation/  map/ (screen, pins, clustering, carousel, search) · details/ · common/
     location/      LocationService (geolocator) + UserLocation provider
+    splash/        animated hand-off from the native launch screen
     settings/      persisted ThemeMode
 assets/data/places.json   sample data
 ```

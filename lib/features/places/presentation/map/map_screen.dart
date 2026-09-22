@@ -34,7 +34,7 @@ class MapScreen extends ConsumerStatefulWidget {
 class _MapScreenState extends ConsumerState<MapScreen>
     with TickerProviderStateMixin {
   final _map = MapController();
-  late final _mover = AnimatedMapMover(controller: _map, vsync: this);
+  late final AnimatedMapMover _mover;
 
   bool _mapReady = false;
   bool _didInitialFit = false;
@@ -60,6 +60,14 @@ class _MapScreenState extends ConsumerState<MapScreen>
 
   /// Shifts a focused place to the middle of the unobstructed area.
   Offset get _focusOffset => Offset(0, (_topInset - _bottomInset) / 2);
+
+  @override
+  void initState() {
+    super.initState();
+    // Created up front: making it lazily in dispose() would need a ticker
+    // from an element that's already deactivated.
+    _mover = AnimatedMapMover(controller: _map, vsync: this);
+  }
 
   @override
   void dispose() {

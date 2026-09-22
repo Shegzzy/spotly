@@ -1,4 +1,5 @@
 import 'package:assessment_app/app.dart';
+import 'package:assessment_app/core/router/app_router.dart';
 import 'package:assessment_app/features/location/location_providers.dart';
 import 'package:assessment_app/features/location/location_service.dart';
 import 'package:assessment_app/features/location/user_location.dart';
@@ -47,6 +48,7 @@ Future<void> pumpSpotly(
   WidgetTester tester, {
   required PlaceRepository repository,
   LocationService? location,
+  bool splash = false,
 }) async {
   tester.view.physicalSize = const Size(1170, 2532);
   tester.view.devicePixelRatio = 3;
@@ -64,6 +66,7 @@ Future<void> pumpSpotly(
           location ?? FakeLocationService(),
         ),
         mapTilesEnabledProvider.overrideWithValue(false),
+        splashEnabledProvider.overrideWithValue(splash),
         lagosNowProvider.overrideWith((ref) => Stream.value(testNow)),
       ],
       child: const SpotlyApp(),

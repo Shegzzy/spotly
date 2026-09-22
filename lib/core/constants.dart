@@ -2,6 +2,7 @@ import 'package:latlong2/latlong.dart';
 
 abstract final class AppConstants {
   static const appName = 'Spotly';
+  static const tagline = 'Salons, food, pharmacies & more';
 
   /// Centre of the sample data, roughly Victoria Island / Ikoyi.
   static const lagosCenter = LatLng(6.4800, 3.4200);
