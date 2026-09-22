@@ -312,21 +312,10 @@ class _PlaceDetailsViewState extends ConsumerState<_PlaceDetailsView> {
                 padChild: false,
                 child: PhotoStrip(place: place),
               ),
+            // Room to scroll the last section clear of the home indicator.
             SliverToBoxAdapter(
-              child: Padding(
-                padding: EdgeInsets.fromLTRB(
-                  20,
-                  32,
-                  20,
-                  MediaQuery.paddingOf(context).bottom + 24,
-                ),
-                child: Text(
-                  'Photos from Unsplash.',
-                  textAlign: TextAlign.center,
-                  style: theme.textTheme.bodySmall?.copyWith(
-                    color: theme.colorScheme.onSurfaceVariant,
-                  ),
-                ),
+              child: SizedBox(
+                height: MediaQuery.paddingOf(context).bottom + 56,
               ),
             ),
           ],
