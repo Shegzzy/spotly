@@ -1,8 +1,8 @@
 # Spotly
 
-Find salons, eateries, pharmacies, cafés, supermarkets and gyms around Lagos on a map.
+Find salons, eateries, pharmacies, cafés, supermarkets and gyms in Lagos and Abuja on a map.
 
-Spotly opens on a map centred on you. You can search in plain words ("saloon", "jollof", "chemist") or tap a category, and each result shows up as a pin in its category's colour. Tap a pin to preview the place, then open the preview for full details: photos, opening hours, directions, call and share. The whole app has light and dark themes, including the map.
+Spotly opens on a map centred on you, in whichever of the two cities you're in. You can search in plain words ("saloon", "jollof", "chemist") or tap a category, and each result shows up as a pin in its category's colour. Tap a pin to preview the place, then open the preview for full details: photos, opening hours, directions, call and share. The whole app has light and dark themes, including the map.
 
 | Map | Preview | Details | Dark mode |
 | --- | --- | --- | --- |
@@ -15,7 +15,7 @@ flutter pub get
 flutter run
 ```
 
-It needs no API keys. Places load from Cloud Firestore (the `spotly-lagos` project is already configured), and the app falls back to the same 42 places bundled in `assets/data/places.json` if Firestore is unreachable. To skip Firebase entirely, run `flutter run --dart-define=DATA_SOURCE=bundled`. The iOS simulator starts in California, so either set a Lagos location (**Features → Location → Custom Location**, e.g. `6.445, 3.470`) or let the app fall back to showing Lagos.
+It needs no API keys. Places load from Cloud Firestore (the `spotly-lagos` project is already configured), and the app falls back to the same 84 places (42 per city) bundled in `assets/data/places.json` if Firestore is unreachable. To skip Firebase entirely, run `flutter run --dart-define=DATA_SOURCE=bundled`. The iOS simulator starts in California, so either set a Lagos or Abuja location (**Features → Location → Custom Location**, e.g. `6.445, 3.470` or `9.075, 7.472`) or let the app fall back to showing Lagos.
 
 ```bash
 flutter test          # unit and widget tests
@@ -37,10 +37,11 @@ The images in `docs/screenshots` are compressed copies of that run.
 - **Pins and cards stay in sync.** Tapping a pin scrolls the card carousel to it, and swiping the carousel moves the map to that pin. The map always frames the results in the clear space between the search bar and the cards.
 - **Details screen.** Collapsing photo header with a hero transition, live open/closed status ("Closes soon · 9 PM"), highlights, a weekly hours table with today marked, a mini map, a photo gallery, and Directions / Call / Share / Copy address.
 - **Light and dark themes.** Follows the system setting until you use the toggle, then remembers your choice. The map tiles are recoloured on the device to match the theme.
-- **Location aware.** Centres on you when you're in Lagos and sorts results by distance. If you're outside Lagos it shows the Lagos sample data and tells you why. Denied permissions get a clear message and a link to Settings.
+- **Two cities.** A city chip at the start of the category row switches between Lagos and Abuja. The camera zooms out, flies across and lands on the other city, and search, filters, counts and the results list all follow the selected city. The choice is remembered across launches.
+- **Location aware.** Opens on your city when you're in Lagos or Abuja, centres on you and sorts results by distance. If you're somewhere else it shows the last city you picked and tells you why. Denied permissions get a clear message and a link to Settings.
 - **Seamless launch.** The native launch screen hands off to a Flutter splash drawn at exactly the same size and position, which plays a short pin-drop intro while places load, then fades into the map. It waits for data for at most 2.6 s, and skips the animation when the system's reduce-motion setting is on.
 - **Every state is handled.** Loading, empty results (with a "Clear" action), load errors (with "Retry"), deep links to a place that doesn't exist, and Android back to dismiss a selection.
-- **Accurate hours.** Opening hours are evaluated in Lagos time (WAT, UTC+1) wherever the viewer is. Late-night windows that cross midnight (e.g. 17:00–02:00) and 24-hour places are handled.
+- **Accurate hours.** Opening hours are evaluated in West Africa Time (WAT, UTC+1, both cities' time zone) wherever the viewer is. Late-night windows that cross midnight (e.g. 17:00–02:00) and 24-hour places are handled.
 
 ## Firebase
 
@@ -61,9 +62,9 @@ lib/
   core/            theme tokens (AppPalette), router, formatters
   features/
     places/
-      domain/        Place, PlaceCategory, OpeningHours, PlaceSearch, PlaceRepository
+      domain/        Place, City, PlaceCategory, OpeningHours, PlaceSearch, PlaceRepository
       data/          FirestorePlaceRepository, AssetPlaceRepository, FallbackPlaceRepository
-      application/   providers: places, filter, search results, selection, clock
+      application/   providers: places, selected city, filter, search results, selection, clock
       presentation/  map/ (screen, pins, clustering, carousel, search) · details/ · common/
     location/      LocationService (geolocator) + UserLocation provider
     splash/        animated hand-off from the native launch screen
@@ -82,7 +83,7 @@ Flutter 3.44 · Dart 3.12 · Cloud Firestore · flutter_riverpod 3 · go_router 
 
 ## Notes
 
-- **Sample data.** All businesses, phone numbers and ratings are fictional. Streets and coordinates are real, and each pin was checked by reverse geocoding to make sure it sits on the named street. Phone numbers use an unassigned Lagos range, so tapping Call can never reach a real person.
+- **Sample data.** All businesses, phone numbers and ratings are fictional. Streets and coordinates are real, and each pin was checked by reverse geocoding to make sure it sits on the named street. Phone numbers use unassigned Lagos (01) and Abuja (09) ranges, so tapping Call can never reach a real person.
 - **Photos** are from [Unsplash](https://unsplash.com) and are requested at the size they're displayed.
-- **Firestore region.** The database is in `nam5` (US multi-region) because the CLI created it automatically on first deploy. A production app for Lagos would use a European region such as `europe-west2` for lower latency.
+- **Firestore region.** The database is in `nam5` (US multi-region) because the CLI created it automatically on first deploy. A production app for Nigeria would use a European region such as `europe-west2` for lower latency.
 - **Map tiles** are © [OpenStreetMap contributors](https://www.openstreetmap.org/copyright), used within the [tile usage policy](https://operations.osmfoundation.org/policies/tiles/) for low-volume apps. A production release should switch to a commercial tile provider.

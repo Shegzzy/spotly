@@ -4,7 +4,6 @@ import 'package:latlong2/latlong.dart';
 
 import '../../../../../core/theme/app_palette.dart';
 import '../../../../../core/utils/formatters.dart';
-import '../../../../location/location_providers.dart';
 import '../../../application/place_providers.dart';
 import '../../../domain/place.dart';
 import '../../common/place_meta.dart';
@@ -39,8 +38,10 @@ class _ResultsList extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final theme = Theme.of(context);
     final places = ref.watch(searchResultsProvider).value ?? const [];
-    final origin = ref.watch(nearbyOriginProvider);
-    final now = ref.watch(lagosNowProvider).value ?? lagosNow();
+    final origin = ref.watch(
+      nearbyOriginProvider(ref.watch(selectedCityProvider)),
+    );
+    final now = ref.watch(watNowProvider).value ?? watNow();
 
     return CustomScrollView(
       controller: scrollController,

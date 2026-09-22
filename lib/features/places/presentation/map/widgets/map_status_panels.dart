@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../application/place_providers.dart';
+import '../../../domain/city.dart';
 import '../../common/floating_surface.dart';
 
 /// "12 pharmacies · List" shown when nothing is selected.
@@ -8,11 +9,13 @@ class ResultsSummary extends StatelessWidget {
   const ResultsSummary({
     super.key,
     required this.count,
+    required this.city,
     required this.filter,
     required this.onShowList,
   });
 
   final int count;
+  final City city;
   final PlaceFilter filter;
   final VoidCallback onShowList;
 
@@ -22,7 +25,9 @@ class ResultsSummary extends StatelessWidget {
         ? (count == 1 ? 'place' : 'places')
         : (count == 1 ? category.label : category.pluralLabel).toLowerCase();
     final query = filter.query.trim();
-    return query.isEmpty ? '$count $noun' : '$count $noun for “$query”';
+    return query.isEmpty
+        ? '$count $noun in ${city.label}'
+        : '$count $noun for “$query”';
   }
 
   @override
@@ -199,7 +204,9 @@ class LoadErrorPanel extends StatelessWidget {
 }
 
 class LoadingPanel extends StatelessWidget {
-  const LoadingPanel({super.key});
+  const LoadingPanel({super.key, required this.city});
+
+  final City city;
 
   @override
   Widget build(BuildContext context) {
@@ -219,7 +226,7 @@ class LoadingPanel extends StatelessWidget {
               const SizedBox(width: 12),
               Flexible(
                 child: Text(
-                  'Finding places around Lagos…',
+                  'Finding places around ${city.label}…',
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: theme.textTheme.labelLarge,

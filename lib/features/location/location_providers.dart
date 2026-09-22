@@ -1,5 +1,4 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:latlong2/latlong.dart';
 
 import 'location_service.dart';
 import 'user_location.dart';
@@ -28,11 +27,3 @@ class UserLocationController extends AsyncNotifier<UserLocation> {
     return next;
   }
 }
-
-/// The user's position when it's useful for distances, i.e. they're in
-/// Lagos where the sample data lives. Otherwise every place would be
-/// thousands of kilometres away.
-final nearbyOriginProvider = Provider<LatLng?>((ref) {
-  final location = ref.watch(userLocationProvider).value;
-  return location != null && location.isInLagos ? location.position : null;
-});

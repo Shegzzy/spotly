@@ -1,3 +1,5 @@
+import 'package:assessment_app/features/location/user_location.dart';
+import 'package:assessment_app/features/places/domain/city.dart';
 import 'package:assessment_app/features/places/domain/opening_hours.dart';
 import 'package:assessment_app/features/places/domain/place_category.dart';
 import 'package:assessment_app/features/places/presentation/common/place_card.dart';
@@ -5,6 +7,7 @@ import 'package:assessment_app/features/places/presentation/map/widgets/place_ma
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helpers/fixtures.dart';
 import '../../../helpers/pump_app.dart';
@@ -36,6 +39,22 @@ void main() {
     ),
   ];
 
+  final abuja = [
+    buildPlace(
+      id: 'zuri',
+      name: 'Zuri Hair Atelier',
+      category: PlaceCategory.salon,
+      city: City.abuja,
+      location: const LatLng(9.0757, 7.4720),
+    ),
+    buildPlace(
+      id: 'arewa',
+      name: 'Arewa Grill House',
+      city: City.abuja,
+      location: const LatLng(9.0813, 7.4842),
+    ),
+  ];
+
   Finder markerFor(String name) =>
       find.byWidgetPredicate((w) => w is PlaceMarker && w.label == name);
 
@@ -45,7 +64,7 @@ void main() {
     await pumpSpotly(tester, repository: FakePlaceRepository(places));
 
     expect(find.byType(PlaceMarker), findsNWidgets(3));
-    expect(find.text('3 places'), findsOneWidget);
+    expect(find.text('3 places in Lagos'), findsOneWidget);
   });
 
   testWidgets('category chips filter the pins', (tester) async {
@@ -70,7 +89,7 @@ void main() {
 
     expect(find.byType(PlaceMarker), findsOneWidget);
     expect(markerFor('MedCare Pharmacy'), findsOneWidget);
-    expect(find.text('1 pharmacy'), findsOneWidget);
+    expect(find.text('1 pharmacy in Lagos'), findsOneWidget);
 
     // Tapping the active chip again clears the filter.
     await tester.tap(pharmacies);
@@ -160,5 +179,74 @@ void main() {
     );
     await settle(tester);
     expect(brightness(), isNot(initial));
+  });
+
+  group('cities', () {
+    testWidgets('shows one city at a time and remembers the switch', (
+      tester,
+    ) async {
+      await pumpSpotly(
+        tester,
+        repository: FakePlaceRepository([...places, ...abuja]),
+      );
+      expect(find.byType(PlaceMarker), findsNWidgets(3));
+      expect(find.text('3 places in Lagos'), findsOneWidget);
+
+      await tester.tap(find.text('Lagos'));
+      await settle(tester);
+      expect(find.text('Choose a city'), findsOneWidget);
+      expect(find.text('2 places'), findsOneWidget);
+
+      await tester.tap(find.text('Abuja'));
+      await settle(tester);
+      await settle(tester); // The flight between cities takes longer.
+
+      expect(find.byType(PlaceMarker), findsNWidgets(2));
+      expect(markerFor('Zuri Hair Atelier'), findsOneWidget);
+      expect(find.text('2 places in Abuja'), findsOneWidget);
+      expect(
+        (await SharedPreferences.getInstance()).getString('city'),
+        'abuja',
+      );
+    });
+
+    testWidgets('opens on the city the user is in', (tester) async {
+      await pumpSpotly(
+        tester,
+        repository: FakePlaceRepository([...places, ...abuja]),
+        location: FakeLocationService(
+          const UserLocation(
+            access: LocationAccess.granted,
+            position: LatLng(9.0700, 7.4700),
+          ),
+        ),
+      );
+      await settle(tester);
+
+      expect(find.text('2 places in Abuja'), findsOneWidget);
+    });
+
+    testWidgets('explains what it shows to users outside both cities', (
+      tester,
+    ) async {
+      await pumpSpotly(
+        tester,
+        repository: FakePlaceRepository([...places, ...abuja]),
+        location: FakeLocationService(
+          const UserLocation(
+            access: LocationAccess.granted,
+            position: LatLng(51.5072, -0.1276),
+          ),
+        ),
+      );
+
+      expect(
+        find.text(
+          'You’re outside Lagos and Abuja, so we’re showing places in Lagos.',
+        ),
+        findsOneWidget,
+      );
+      expect(find.text('3 places in Lagos'), findsOneWidget);
+    });
   });
 }

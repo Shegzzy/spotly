@@ -1,14 +1,19 @@
+import 'dart:math' as math;
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 
 /// Smoothly animates a [MapController], which on its own can only jump.
+///
+/// Long hops (e.g. Lagos to Abuja) zoom out and back in on the way, like a
+/// plane taking off and landing, rather than smearing across the map.
 class AnimatedMapMover {
   AnimatedMapMover({required this.controller, required TickerProvider vsync})
-    : _animation = AnimationController(
-        vsync: vsync,
-        duration: const Duration(milliseconds: 700),
-      );
+    : _animation = AnimationController(vsync: vsync, duration: _short);
+
+  static const _short = Duration(milliseconds: 700);
+  static const _long = Duration(milliseconds: 1500);
 
   final MapController controller;
   final AnimationController _animation;
@@ -65,6 +70,10 @@ class AnimatedMapMover {
     double toZoom,
   ) {
     _detach();
+
+    final dip = _zoomOut(fromCenter, toCenter, math.min(fromZoom, toZoom));
+    _animation.duration = dip > 1 ? _long : _short;
+
     final curve = CurvedAnimation(
       parent: _animation,
       curve: Curves.easeInOutCubic,
@@ -79,10 +88,23 @@ class AnimatedMapMover {
     ).animate(curve);
     final zoom = Tween(begin: fromZoom, end: toZoom).animate(curve);
 
-    final tick = _tick = () =>
-        controller.move(LatLng(latitude.value, longitude.value), zoom.value);
+    final tick = _tick = () => controller.move(
+      LatLng(latitude.value, longitude.value),
+      zoom.value - dip * math.sin(math.pi * curve.value),
+    );
     _animation.addListener(tick);
     _animation.forward(from: 0);
+  }
+
+  /// How far below [lowestZoom] the camera has to go to see both [from]
+  /// and [to] at once, halfway through the move. Zero for nearby moves.
+  double _zoomOut(LatLng from, LatLng to, double lowestZoom) {
+    if (from == to) return 0;
+    final overview = CameraFit.coordinates(
+      coordinates: [from, to],
+      padding: const EdgeInsets.all(48),
+    ).fit(controller.camera).zoom;
+    return overview.isFinite ? math.max(0, lowestZoom - overview) : 0;
   }
 
   void _detach() {

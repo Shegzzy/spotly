@@ -67,7 +67,7 @@ Future<void> pumpSpotly(
         ),
         mapTilesEnabledProvider.overrideWithValue(false),
         splashEnabledProvider.overrideWithValue(splash),
-        lagosNowProvider.overrideWith((ref) => Stream.value(testNow)),
+        watNowProvider.overrideWith((ref) => Stream.value(testNow)),
       ],
       child: const SpotlyApp(),
     ),

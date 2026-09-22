@@ -1,5 +1,6 @@
 import 'package:latlong2/latlong.dart';
 
+import 'city.dart';
 import 'opening_hours.dart';
 import 'place_category.dart';
 
@@ -36,7 +37,7 @@ class Place {
       ),
       address: json['address']! as String,
       area: json['area']! as String,
-      city: json['city'] as String? ?? 'Lagos',
+      city: City.fromLabel(json['city'] as String? ?? City.lagos.label),
       rating: (json['rating']! as num).toDouble(),
       reviewCount: (json['reviewCount'] as num?)?.toInt() ?? 0,
       description: json['description'] as String? ?? '',
@@ -56,7 +57,7 @@ class Place {
 
   /// Neighbourhood, e.g. "Lekki Phase 1".
   final String area;
-  final String city;
+  final City city;
   final double rating;
   final int reviewCount;
   final String description;
@@ -70,7 +71,7 @@ class Place {
 
   String? get coverPhoto => photos.isEmpty ? null : photos.first;
 
-  String get fullAddress => '$address, $area, $city';
+  String get fullAddress => '$address, $area, ${city.label}';
 
   Map<String, Object?> toJson() => {
     'id': id,
@@ -79,7 +80,7 @@ class Place {
     'location': {'lat': location.latitude, 'lng': location.longitude},
     'address': address,
     'area': area,
-    'city': city,
+    'city': city.label,
     'rating': rating,
     'reviewCount': reviewCount,
     'description': description,

@@ -36,14 +36,15 @@ void main() {
   testWidgets('search, preview and details in light and dark', (tester) async {
     await (await SharedPreferences.getInstance()).clear();
     await app.main();
-    await wait(tester, 5000);
+    // The splash, then network tiles.
+    await wait(tester, 9000);
 
     // The places came from Firestore (and are now in its offline cache),
     // not from the bundled fallback.
     final cached = await FirebaseFirestore.instance
         .collection('places')
         .get(const GetOptions(source: Source.cache));
-    expect(cached.docs, hasLength(42));
+    expect(cached.docs, hasLength(84));
     await shot(tester, '01-map-light');
 
     // Filter to salons and preview one.
@@ -99,5 +100,15 @@ void main() {
     await tester.tap(find.text('List'));
     await wait(tester);
     await shot(tester, '10-list-dark');
+
+    // Close the list and fly to Abuja.
+    await tester.tapAt(const Offset(40, 80));
+    await wait(tester);
+    await tester.tap(find.text('Lagos'));
+    await wait(tester);
+    await tester.tap(find.text('Abuja'));
+    await wait(tester, 4000);
+    expect(find.text('42 places in Abuja'), findsOneWidget);
+    await shot(tester, '11-abuja-dark');
   });
 }

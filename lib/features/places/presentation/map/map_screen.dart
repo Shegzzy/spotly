@@ -5,16 +5,18 @@ import 'package:flutter/services.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:latlong2/latlong.dart';
 
-import '../../../../core/constants.dart';
 import '../../../location/location_providers.dart';
 import '../../../location/user_location.dart';
 import '../../application/place_providers.dart';
+import '../../domain/city.dart';
 import '../../domain/place.dart';
 import '../common/place_card.dart';
 import 'animated_map_mover.dart';
 import 'map_tiles.dart';
 import 'widgets/category_chips.dart';
+import 'widgets/city_picker.dart';
 import 'widgets/map_controls.dart';
 import 'widgets/map_search_bar.dart';
 import 'widgets/map_status_panels.dart';
@@ -39,9 +41,12 @@ class _MapScreenState extends ConsumerState<MapScreen>
   bool _mapReady = false;
   bool _didInitialFit = false;
   bool _didCenterOnUser = false;
-  bool _didWarnOutsideLagos = false;
+  bool _didWarnOutsideCities = false;
   bool _locating = false;
   Timer? _refitDebounce;
+
+  /// Where to land after the city changes, instead of framing the city.
+  (LatLng, double)? _pendingFocus;
 
   // Space taken by the floating search UI and bottom panels, so camera
   // moves keep places in the clear part of the map.
@@ -88,7 +93,7 @@ class _MapScreenState extends ConsumerState<MapScreen>
   }
 
   void _maybeInitialFit() {
-    final places = ref.read(placesProvider).value;
+    final places = ref.read(cityPlacesProvider).value;
     if (!_mapReady || _didInitialFit || _didCenterOnUser || places == null) {
       return;
     }
@@ -129,18 +134,62 @@ class _MapScreenState extends ConsumerState<MapScreen>
     _mover.moveTo(place.location, zoom, offset: _focusOffset);
   }
 
+  /// Frames the selected city: its search results, or all its places if
+  /// the search matches nothing there.
+  void _fitToCity() {
+    final results = ref.read(searchResultsProvider).value;
+    final places = results == null || results.isEmpty
+        ? ref.read(cityPlacesProvider).value
+        : results;
+    if (places == null || places.isEmpty) {
+      _mover.moveTo(ref.read(selectedCityProvider).center, 11.3);
+    } else {
+      _mover.fit(
+        [for (final place in places) place.location],
+        padding: _fitPadding,
+        maxZoom: 15.5,
+      );
+    }
+  }
+
+  /// Switches to [city] and flies there, or to [focus] within it.
+  void _switchCity(City city, {LatLng? focus, double zoom = 15}) {
+    if (city != ref.read(selectedCityProvider)) {
+      // The camera moves when the change comes through, in _onCityChanged.
+      _pendingFocus = focus == null ? null : (focus, zoom);
+      ref.read(selectedCityProvider.notifier).select(city);
+    } else if (focus != null) {
+      if (_mapReady) _mover.moveTo(focus, zoom, offset: _focusOffset);
+    } else {
+      if (_mapReady) _fitToCity();
+    }
+  }
+
+  /// Handles every city change, including ones from outside the map such
+  /// as opening a place from a notification.
+  void _onCityChanged() {
+    _select(null);
+    final focus = _pendingFocus;
+    _pendingFocus = null;
+    if (!_mapReady) return;
+    if (focus != null) {
+      _mover.moveTo(focus.$1, focus.$2, offset: _focusOffset);
+    } else {
+      _fitToCity();
+    }
+  }
+
   void _onLocationResolved(UserLocation location) {
     final position = location.position;
     if (!_mapReady || position == null) return;
-    if (location.isInLagos) {
+    final city = City.containing(position);
+    if (city != null) {
       if (_didCenterOnUser) return;
       _didCenterOnUser = true;
-      _mover.moveTo(position, 13.5, offset: _focusOffset);
-    } else if (!_didWarnOutsideLagos) {
-      _didWarnOutsideLagos = true;
-      _showMessage(
-        'You’re outside Lagos, so we’re showing sample places there.',
-      );
+      _switchCity(city, focus: position, zoom: 13.5);
+    } else if (!_didWarnOutsideCities) {
+      _didWarnOutsideCities = true;
+      _showOutsideCitiesMessage();
     }
   }
 
@@ -152,6 +201,12 @@ class _MapScreenState extends ConsumerState<MapScreen>
   }
 
   void _openDetails(Place place) => context.push('/place/${place.id}');
+
+  Future<void> _pickCity() async {
+    FocusManager.instance.primaryFocus?.unfocus();
+    final city = await showCityPicker(context);
+    if (city != null && mounted) _switchCity(city);
+  }
 
   Future<void> _showList() async {
     final place = await showResultsListSheet(context);
@@ -167,13 +222,11 @@ class _MapScreenState extends ConsumerState<MapScreen>
     final position = location.position;
     switch (location.access) {
       case LocationAccess.granted when position != null:
-        if (location.isInLagos) {
-          _mover.moveTo(position, 15, offset: _focusOffset);
+        if (City.containing(position) case final city?) {
+          _switchCity(city, focus: position);
         } else {
-          _showMessage(
-            'You’re outside Lagos, so we’re showing sample places there.',
-          );
-          _fitToResults();
+          _showOutsideCitiesMessage();
+          _fitToCity();
         }
       case LocationAccess.denied:
         _showMessage('Allow location access to see what’s near you.');
@@ -191,6 +244,14 @@ class _MapScreenState extends ConsumerState<MapScreen>
           ),
         );
     }
+  }
+
+  void _showOutsideCitiesMessage() {
+    final cities = City.values.map((c) => c.label).join(' and ');
+    final showing = ref.read(selectedCityProvider).label;
+    _showMessage(
+      'You’re outside $cities, so we’re showing places in $showing.',
+    );
   }
 
   void _showMessage(String message, {SnackBarAction? action}) {
@@ -217,9 +278,10 @@ class _MapScreenState extends ConsumerState<MapScreen>
   @override
   Widget build(BuildContext context) {
     ref
-      ..listen(placesProvider, (_, next) {
+      ..listen(cityPlacesProvider, (_, next) {
         if (next.hasValue) _maybeInitialFit();
       })
+      ..listen(selectedCityProvider, (_, _) => _onCityChanged())
       ..listen(userLocationProvider, (_, next) {
         final location = next.value;
         if (location != null) _onLocationResolved(location);
@@ -270,9 +332,10 @@ class _MapScreenState extends ConsumerState<MapScreen>
                 child: FlutterMap(
                   mapController: _map,
                   options: MapOptions(
-                    initialCenter: AppConstants.lagosCenter,
+                    initialCenter: ref.read(selectedCityProvider).center,
                     initialZoom: 11.3,
-                    minZoom: 9,
+                    // Low enough to fly between cities.
+                    minZoom: 5,
                     maxZoom: 19,
                     backgroundColor: isDark
                         ? const Color(0xFF0E1015)
@@ -334,6 +397,7 @@ class _MapScreenState extends ConsumerState<MapScreen>
                       CategoryChips(
                         onChanged: () =>
                             FocusManager.instance.primaryFocus?.unfocus(),
+                        onCityTap: _pickCity,
                       ),
                     ],
                   ),
@@ -413,7 +477,10 @@ class _MapScreenState extends ConsumerState<MapScreen>
           child: LoadErrorPanel(onRetry: () => ref.invalidate(placesProvider)),
         );
       }
-      return const LoadingPanel(key: ValueKey('loading'));
+      return LoadingPanel(
+        key: const ValueKey('loading'),
+        city: ref.watch(selectedCityProvider),
+      );
     }
 
     final filter = ref.watch(placeFilterProvider);
@@ -433,8 +500,10 @@ class _MapScreenState extends ConsumerState<MapScreen>
         key: const ValueKey('carousel'),
         places: places,
         selectedId: selectedId,
-        now: ref.watch(lagosNowProvider).value ?? lagosNow(),
-        origin: ref.watch(nearbyOriginProvider),
+        now: ref.watch(watNowProvider).value ?? watNow(),
+        origin: ref.watch(
+          nearbyOriginProvider(ref.watch(selectedCityProvider)),
+        ),
         onSwiped: _select,
         onOpen: _openDetails,
       );
@@ -445,6 +514,7 @@ class _MapScreenState extends ConsumerState<MapScreen>
       padding: inset,
       child: ResultsSummary(
         count: places.length,
+        city: ref.watch(selectedCityProvider),
         filter: filter,
         onShowList: _showList,
       ),

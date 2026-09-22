@@ -1,3 +1,4 @@
+import 'package:assessment_app/features/places/domain/city.dart';
 import 'package:assessment_app/features/places/domain/opening_hours.dart';
 import 'package:assessment_app/features/places/domain/place.dart';
 import 'package:assessment_app/features/places/domain/place_category.dart';
@@ -12,6 +13,7 @@ Place buildPlace({
   PlaceCategory category = PlaceCategory.eatery,
   LatLng location = const LatLng(6.45, 3.47),
   String area = 'Lekki Phase 1',
+  City city = City.lagos,
   double rating = 4.5,
   List<String> tags = const [],
   OpeningHours? hours,
@@ -22,7 +24,7 @@ Place buildPlace({
   location: location,
   address: '1 Test Street',
   area: area,
-  city: 'Lagos',
+  city: city,
   rating: rating,
   reviewCount: 10,
   description: 'A test place.',

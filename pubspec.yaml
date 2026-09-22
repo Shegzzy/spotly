@@ -1,5 +1,5 @@
 name: assessment_app
-description: "Spotly: find salons, eateries, pharmacies and more around Lagos."
+description: "Spotly: find salons, eateries, pharmacies and more in Lagos and Abuja."
 publish_to: 'none'
 
 version: 1.0.0+1

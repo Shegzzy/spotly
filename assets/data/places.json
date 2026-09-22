@@ -1504,6 +1504,1524 @@
         "00:00-24:00"
       ],
       "priceLevel": 2
+    },
+    {
+      "id": "zuri-hair-atelier",
+      "name": "Zuri Hair Atelier",
+      "category": "salon",
+      "location": {
+        "lat": 9.07566,
+        "lng": 7.47203
+      },
+      "address": "18 Aminu Kano Crescent",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.8,
+      "reviewCount": 276,
+      "phone": "+234 9 000 0001",
+      "description": "A bright, unhurried studio for natural hair. Known for knotless braids, silk presses and loc maintenance, with stylists who take their time over consultations.",
+      "tags": [
+        "Knotless braids",
+        "Silk press",
+        "Locs",
+        "Natural hair",
+        "Wash & style"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1508002366005-75a695ee2d17",
+        "https://images.unsplash.com/photo-1761819921345-a5c1cedd19c5",
+        "https://images.unsplash.com/photo-1594254773847-9fce26e950bc"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "12:00-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "capital-cuts",
+      "name": "Capital Cuts Barbershop",
+      "category": "salon",
+      "location": {
+        "lat": 9.06877,
+        "lng": 7.44039
+      },
+      "address": "7 Ajose Adeogun Street",
+      "area": "Utako",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 488,
+      "phone": "+234 9 000 0002",
+      "description": "A busy neighbourhood barbershop for clean fades, beard shaping and quick walk-ins. Expect a short queue on Saturday mornings.",
+      "tags": [
+        "Fades",
+        "Beard trim",
+        "Walk-ins",
+        "Kids' cuts"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1647140655214-e4a2d914971f",
+        "https://images.unsplash.com/photo-1605497788044-5a32c7078486",
+        "https://images.unsplash.com/photo-1503951914875-452162b0f3f1"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "12:00-20:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "maitama-glow-spa",
+      "name": "Maitama Glow Spa",
+      "category": "salon",
+      "location": {
+        "lat": 9.08187,
+        "lng": 7.50035
+      },
+      "address": "24 Gana Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.7,
+      "reviewCount": 164,
+      "phone": "+234 9 000 0003",
+      "description": "A quiet day spa off Gana Street offering facials, massages and full bridal glam. Book ahead for weekend appointments.",
+      "tags": [
+        "Facials",
+        "Massage",
+        "Bridal makeup",
+        "Manicure",
+        "Pedicure"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1741522509438-a120c0bb5e88",
+        "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9",
+        "https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2"
+      ],
+      "hours": [
+        null,
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "lash-and-brow-lab",
+      "name": "Lash & Brow Lab",
+      "category": "salon",
+      "location": {
+        "lat": 9.06622,
+        "lng": 7.42908
+      },
+      "address": "5 Ebitu Ukiwe Street",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 132,
+      "phone": "+234 9 000 0004",
+      "description": "Specialists in lash extensions, brow lamination and microblading, a short walk from Jabi Lake.",
+      "tags": [
+        "Lash extensions",
+        "Brow lamination",
+        "Microblading",
+        "Makeup"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1589710751893-f9a6770ad71b",
+        "https://images.unsplash.com/photo-1709477542149-f4e0e21d590b",
+        "https://images.unsplash.com/photo-1735151226446-1d364b4adc2f"
+      ],
+      "hours": [
+        "10:00-19:00",
+        "10:00-19:00",
+        "10:00-19:00",
+        "10:00-19:00",
+        "10:00-19:00",
+        "10:00-19:00",
+        null
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "area-eleven-braid-bar",
+      "name": "Area 11 Braid Bar",
+      "category": "salon",
+      "location": {
+        "lat": 9.04069,
+        "lng": 7.50393
+      },
+      "address": "3 Gimbiya Street",
+      "area": "Garki II",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 301,
+      "phone": "+234 9 000 0005",
+      "description": "Affordable braids, twists and cornrows done quickly by a team of experienced braiders. Bring your own extensions or buy them here.",
+      "tags": [
+        "Box braids",
+        "Cornrows",
+        "Twists",
+        "Crochet",
+        "Kids' styles"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1612459284970-e8f027596582",
+        "https://images.unsplash.com/photo-1606416132922-22ab37c1231e",
+        "https://images.unsplash.com/photo-1702236240794-58dc4c6895e5"
+      ],
+      "hours": [
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "07:30-19:30",
+        "13:00-18:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "the-gentlemans-chair",
+      "name": "The Gentleman's Chair",
+      "category": "salon",
+      "location": {
+        "lat": 9.04161,
+        "lng": 7.52044
+      },
+      "address": "11 Kwame Nkrumah Crescent",
+      "area": "Asokoro",
+      "city": "Abuja",
+      "rating": 4.7,
+      "reviewCount": 219,
+      "phone": "+234 9 000 0006",
+      "description": "An upscale grooming lounge with hot-towel shaves, beard treatments and a calm waiting area with good coffee.",
+      "tags": [
+        "Hot-towel shave",
+        "Beard care",
+        "Fades",
+        "Scalp treatment"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1517832606299-7ae9b720a186",
+        "https://images.unsplash.com/photo-1630827020718-3433092696e7",
+        "https://images.unsplash.com/photo-1635273051839-003bf06a8751"
+      ],
+      "hours": [
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "12:00-18:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "nail-nook",
+      "name": "Nail Nook",
+      "category": "salon",
+      "location": {
+        "lat": 9.09676,
+        "lng": 7.41709
+      },
+      "address": "402 1st Avenue",
+      "area": "Gwarinpa",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 97,
+      "phone": "+234 9 000 0007",
+      "description": "A cosy nail bar on 1st Avenue for gel manicures, acrylics and pedicures. Walk-ins are welcome most weekdays.",
+      "tags": [
+        "Gel nails",
+        "Acrylics",
+        "Pedicure",
+        "Nail art"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1619607146034-5a05296c8f9a",
+        "https://images.unsplash.com/photo-1604654894610-df63bc536371",
+        "https://images.unsplash.com/photo-1658492055212-e1acbccfca5a"
+      ],
+      "hours": [
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "10:00-20:00",
+        "12:00-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "arewa-grill-house",
+      "name": "Arewa Grill House",
+      "category": "eatery",
+      "location": {
+        "lat": 9.08131,
+        "lng": 7.48423
+      },
+      "address": "32 Adetokunbo Ademola Crescent",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 842,
+      "phone": "+234 9 000 0008",
+      "description": "Northern Nigerian grills done properly: suya, balangu and whole grilled fish, served with yaji, sliced onions and cold zobo.",
+      "tags": [
+        "Suya",
+        "Balangu",
+        "Grilled fish",
+        "Zobo",
+        "Outdoor seating"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1555939594-58d7cb561ad1",
+        "https://images.unsplash.com/photo-1556814901-18c866c057da",
+        "https://images.unsplash.com/photo-1632158929962-a929c9e87570"
+      ],
+      "hours": [
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00",
+        "11:00-23:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "mama-hauwas-kitchen",
+      "name": "Mama Hauwa's Kitchen",
+      "category": "eatery",
+      "location": {
+        "lat": 9.01878,
+        "lng": 7.49139
+      },
+      "address": "14 Ladoke Akintola Boulevard",
+      "area": "Garki II",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 610,
+      "phone": "+234 9 000 0009",
+      "description": "A lunchtime favourite for tuwo shinkafa with miyan kuka, masa and pepper soup. Portions are generous and prices are fair.",
+      "tags": [
+        "Tuwo shinkafa",
+        "Miyan kuka",
+        "Masa",
+        "Pepper soup",
+        "Takeaway"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1665400808116-f0e6339b7e9a",
+        "https://images.unsplash.com/photo-1604329760661-e71dc83f8f26",
+        "https://images.unsplash.com/photo-1665332561290-cc6757172890"
+      ],
+      "hours": [
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        "07:00-19:00",
+        null
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "lakeside-bistro",
+      "name": "Lakeside Bistro",
+      "category": "eatery",
+      "location": {
+        "lat": 9.06244,
+        "lng": 7.42336
+      },
+      "address": "21 Obafemi Awolowo Way",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 395,
+      "phone": "+234 9 000 0010",
+      "description": "Relaxed all-day dining near Jabi Lake, with jollof, grilled chicken and pasta, and a long brunch menu at weekends.",
+      "tags": [
+        "Jollof rice",
+        "Brunch",
+        "Grilled chicken",
+        "Family friendly"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1667388969250-1c7220bf3f37",
+        "https://images.unsplash.com/photo-1621523132966-19f711d565d1",
+        "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa"
+      ],
+      "hours": [
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00",
+        "10:00-22:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "pepper-soup-palace",
+      "name": "Pepper Soup Palace",
+      "category": "eatery",
+      "location": {
+        "lat": 9.07264,
+        "lng": 7.43403
+      },
+      "address": "9 Solomon Lar Way",
+      "area": "Utako",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 520,
+      "phone": "+234 9 000 0011",
+      "description": "An after-work spot for goat meat and catfish pepper soup, asun and cold drinks. Busiest after 7 PM.",
+      "tags": [
+        "Catfish pepper soup",
+        "Asun",
+        "Goat meat",
+        "Late night"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1707274860789-12ba022ff3c1",
+        "https://images.unsplash.com/photo-1689155494424-d2337856fe3e",
+        "https://images.unsplash.com/photo-1645066804237-08145dd196e9"
+      ],
+      "hours": [
+        "16:00-01:00",
+        "16:00-01:00",
+        "16:00-01:00",
+        "16:00-01:00",
+        "16:00-01:00",
+        "16:00-01:00",
+        "16:00-01:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "the-maitama-table",
+      "name": "The Maitama Table",
+      "category": "eatery",
+      "location": {
+        "lat": 9.07693,
+        "lng": 7.50097
+      },
+      "address": "6 Usuma Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.8,
+      "reviewCount": 287,
+      "phone": "+234 9 000 0012",
+      "description": "Modern Nigerian cooking as a tasting menu in a converted Maitama villa. Reservations are recommended, and the smoked jollof is a must.",
+      "tags": [
+        "Tasting menu",
+        "Smoked jollof",
+        "Wine list",
+        "Reservations"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1414235077428-338989a2e8c0",
+        "https://images.unsplash.com/photo-1663530761401-15eefb544889",
+        "https://images.unsplash.com/photo-1664993101841-036f189719b6"
+      ],
+      "hours": [
+        null,
+        "18:00-23:00",
+        "18:00-23:00",
+        "18:00-23:00",
+        "18:00-23:30",
+        "12:00-23:30",
+        "12:00-22:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "suya-junction",
+      "name": "Suya Junction",
+      "category": "eatery",
+      "location": {
+        "lat": 9.06335,
+        "lng": 7.47269
+      },
+      "address": "88 Herbert Macaulay Way",
+      "area": "Wuse",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 1034,
+      "phone": "+234 9 000 0013",
+      "description": "Late-night suya straight off the grill, sliced to order and wrapped with extra yaji and onions. Worth the wait.",
+      "tags": [
+        "Beef suya",
+        "Chicken suya",
+        "Kilishi",
+        "Late night"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1627947063935-55577ec3c2e1",
+        "https://images.unsplash.com/photo-1603088549155-6ae9395b928f",
+        "https://images.unsplash.com/photo-1558540319-35836c870b28"
+      ],
+      "hours": [
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00",
+        "17:00-02:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "ofada-and-co",
+      "name": "Ofada & Co.",
+      "category": "eatery",
+      "location": {
+        "lat": 9.08356,
+        "lng": 7.48723
+      },
+      "address": "40 Aguiyi Ironsi Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 402,
+      "phone": "+234 9 000 0014",
+      "description": "Ofada rice with ayamase, efo riro, and amala with gbegiri and ewedu, cooked the way it's done at home.",
+      "tags": [
+        "Ofada rice",
+        "Ayamase",
+        "Amala",
+        "Efo riro"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1773620494047-50cb58f59bc5",
+        "https://images.unsplash.com/photo-1632852576480-c10a8e19496a",
+        "https://images.unsplash.com/photo-1673465580365-b96bef916770"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "10:00-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "capital-care-pharmacy",
+      "name": "Capital Care Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.07714,
+        "lng": 7.47309
+      },
+      "address": "51 Aminu Kano Crescent",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 238,
+      "phone": "+234 9 000 0015",
+      "description": "Open around the clock, with a pharmacist always on duty and a well-stocked baby and skincare aisle.",
+      "tags": [
+        "Open 24 hours",
+        "Pharmacist on duty",
+        "Baby care",
+        "Skincare"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1576602976047-174e57a47881",
+        "https://images.unsplash.com/photo-1580281657529-557a6abb6387"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ]
+    },
+    {
+      "id": "maitama-medics",
+      "name": "Maitama Medics Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.0922,
+        "lng": 7.48345
+      },
+      "address": "12 Mississippi Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 142,
+      "phone": "+234 9 000 0016",
+      "description": "A calm, well-organised pharmacy that fills prescriptions quickly and offers free blood pressure checks.",
+      "tags": [
+        "Prescriptions",
+        "BP checks",
+        "Vitamins",
+        "Delivery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1576671081837-49000212a370",
+        "https://images.unsplash.com/photo-1585980205396-b0680dbe2ded"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "10:00-20:00"
+      ]
+    },
+    {
+      "id": "jabi-wellness-pharmacy",
+      "name": "Jabi Wellness Pharmacy",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.06935,
+        "lng": 7.42356
+      },
+      "address": "15 Mike Akhigbe Way",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 176,
+      "phone": "+234 9 000 0017",
+      "description": "Prescriptions, over-the-counter medicines and diabetes supplies, with same-day delivery around Jabi and Utako.",
+      "tags": [
+        "Diabetes care",
+        "Same-day delivery",
+        "Prescriptions",
+        "First aid"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1587854692152-cbe660dbde88",
+        "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "12:00-19:00"
+      ]
+    },
+    {
+      "id": "gwarinpa-family-chemist",
+      "name": "Gwarinpa Family Chemist",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.09077,
+        "lng": 7.41344
+      },
+      "address": "118 1st Avenue",
+      "area": "Gwarinpa",
+      "city": "Abuja",
+      "rating": 4.2,
+      "reviewCount": 91,
+      "phone": "+234 9 000 0018",
+      "description": "A friendly neighbourhood chemist on 1st Avenue for everyday medicines, malaria tests and children's health.",
+      "tags": [
+        "Malaria tests",
+        "Children's health",
+        "Everyday medicines"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1580281798366-ea571ecb5fc8",
+        "https://images.unsplash.com/photo-1765031092161-a9ebe556117e"
+      ],
+      "hours": [
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "07:30-21:00",
+        "12:00-19:00"
+      ]
+    },
+    {
+      "id": "asokoro-pharmacy",
+      "name": "Asokoro Pharmacy & Stores",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.04837,
+        "lng": 7.50986
+      },
+      "address": "8 Jimmy Carter Street",
+      "area": "Asokoro",
+      "city": "Abuja",
+      "rating": 4.7,
+      "reviewCount": 129,
+      "phone": "+234 9 000 0019",
+      "description": "Well stocked and well run, with a private consultation room and a strong range of imported medicines.",
+      "tags": [
+        "Consultation room",
+        "Imported brands",
+        "Prescriptions",
+        "Vaccines"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1788487638290-b93e4e9333a0",
+        "https://images.unsplash.com/photo-1512069772995-ec65ed45afd6"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "garki-rx",
+      "name": "Garki Rx",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.03708,
+        "lng": 7.48967
+      },
+      "address": "27 Tafawa Balewa Way",
+      "area": "Garki I",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 207,
+      "phone": "+234 9 000 0020",
+      "description": "A 24-hour pharmacy on Tafawa Balewa Way, handy for late-night prescriptions and emergency supplies.",
+      "tags": [
+        "Open 24 hours",
+        "Prescriptions",
+        "First aid"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1639432522665-12c11347b61a",
+        "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ]
+    },
+    {
+      "id": "utako-medpoint",
+      "name": "Utako MedPoint",
+      "category": "pharmacy",
+      "location": {
+        "lat": 9.07174,
+        "lng": 7.44205
+      },
+      "address": "4 Augustus Aikhomu Way",
+      "area": "Utako",
+      "city": "Abuja",
+      "rating": 4.1,
+      "reviewCount": 84,
+      "phone": "+234 9 000 0021",
+      "description": "A compact pharmacy for everyday medicines, test kits and quick advice from the pharmacist.",
+      "tags": [
+        "Test kits",
+        "Everyday medicines",
+        "Pharmacist advice"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1622230208995-0f26eba75875",
+        "https://images.unsplash.com/photo-1628771065518-0d82f1938462"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        null
+      ]
+    },
+    {
+      "id": "harmattan-coffee",
+      "name": "Harmattan Coffee",
+      "category": "cafe",
+      "location": {
+        "lat": 9.07472,
+        "lng": 7.48034
+      },
+      "address": "10 Cairo Street",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.7,
+      "reviewCount": 455,
+      "phone": "+234 9 000 0022",
+      "description": "Nigerian and Ethiopian beans roasted in small batches, plus good Wi-Fi and plenty of sockets for laptop days.",
+      "tags": [
+        "Specialty coffee",
+        "Wi-Fi",
+        "Pastries",
+        "Cold brew"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1447933601403-0c6688de566e",
+        "https://images.unsplash.com/photo-1593443320739-77f74939d0da",
+        "https://images.unsplash.com/photo-1542372147193-a7aca54189cd"
+      ],
+      "hours": [
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "07:00-21:00",
+        "09:00-21:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "zuma-roasters",
+      "name": "Zuma Roasters",
+      "category": "cafe",
+      "location": {
+        "lat": 9.09024,
+        "lng": 7.50413
+      },
+      "address": "3 Lake Chad Crescent",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.8,
+      "reviewCount": 312,
+      "phone": "+234 9 000 0023",
+      "description": "A roastery café with a leafy courtyard. The pour-overs are excellent and the banana bread sells out by noon.",
+      "tags": [
+        "Pour-over",
+        "Courtyard",
+        "Banana bread",
+        "Roastery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1736592505936-7492894f512d",
+        "https://images.unsplash.com/photo-1442512595331-e89e73853f31",
+        "https://images.unsplash.com/photo-1652007762293-351f77da346f"
+      ],
+      "hours": [
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00",
+        "07:30-19:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "lakeview-cafe",
+      "name": "Lakeview Café",
+      "category": "cafe",
+      "location": {
+        "lat": 9.07431,
+        "lng": 7.42832
+      },
+      "address": "2 Bala Sokoto Way",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 268,
+      "phone": "+234 9 000 0024",
+      "description": "Coffee, smoothies and light bites a short walk from Jabi Lake, with outdoor tables that catch the evening breeze.",
+      "tags": [
+        "Smoothies",
+        "Outdoor seating",
+        "Light bites",
+        "Iced coffee"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1577056922428-a511301a562d",
+        "https://images.unsplash.com/photo-1461023058943-07fcbe16d735",
+        "https://images.unsplash.com/photo-1558473399-6773c890474c"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "crumbs-and-kettle",
+      "name": "Crumbs & Kettle Bakery",
+      "category": "cafe",
+      "location": {
+        "lat": 9.03554,
+        "lng": 7.47838
+      },
+      "address": "19 Moshood Abiola Way",
+      "area": "Garki I",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 199,
+      "phone": "+234 9 000 0025",
+      "description": "A neighbourhood bakery for warm bread, meat pies and doughnuts, with strong tea and coffee to go.",
+      "tags": [
+        "Fresh bread",
+        "Meat pies",
+        "Doughnuts",
+        "Takeaway"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1608198093002-ad4e005484ec",
+        "https://images.unsplash.com/photo-1568254183919-78a4f43a2877",
+        "https://images.unsplash.com/photo-1587241321921-91a834d6d191"
+      ],
+      "hours": [
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "06:30-20:00",
+        "08:00-16:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "aso-brew-bar",
+      "name": "Aso Brew Bar",
+      "category": "cafe",
+      "location": {
+        "lat": 9.03119,
+        "lng": 7.52151
+      },
+      "address": "16 T. Y. Danjuma Street",
+      "area": "Asokoro",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 147,
+      "phone": "+234 9 000 0026",
+      "description": "A polished café for meetings, with espresso drinks, fresh juices and an all-day breakfast menu.",
+      "tags": [
+        "Espresso",
+        "All-day breakfast",
+        "Fresh juice",
+        "Meeting friendly"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1511920170033-f8396924c348",
+        "https://images.unsplash.com/photo-1648462908676-8305f0eff8e0",
+        "https://images.unsplash.com/photo-1512568400610-62da28bc8a13"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        null
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "page-and-pour",
+      "name": "Page & Pour",
+      "category": "cafe",
+      "location": {
+        "lat": 8.99979,
+        "lng": 7.4692
+      },
+      "address": "5 Constitution Avenue",
+      "area": "Garki",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 121,
+      "phone": "+234 9 000 0027",
+      "description": "A book café with shelves of Nigerian fiction, quiet reading nooks and some of the best iced lattes in town.",
+      "tags": [
+        "Books",
+        "Reading nooks",
+        "Iced latte",
+        "Quiet"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1690643211963-eba332f2cc8c",
+        "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c",
+        "https://images.unsplash.com/photo-1563538516587-42ae17314ca0"
+      ],
+      "hours": [
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "09:00-20:00",
+        "12:00-18:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "sunrise-bakehouse",
+      "name": "Sunrise Bakehouse",
+      "category": "cafe",
+      "location": {
+        "lat": 9.05892,
+        "lng": 7.4139
+      },
+      "address": "7 Idris Ibrahim Crescent",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 110,
+      "phone": "+234 9 000 0028",
+      "description": "An early-opening bakery café for croissants, puff-puff and coffee before work.",
+      "tags": [
+        "Croissants",
+        "Puff-puff",
+        "Breakfast",
+        "Early opening"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1623334044303-241021148842",
+        "https://images.unsplash.com/photo-1738898326912-83ec04de4ccf",
+        "https://images.unsplash.com/photo-1738866299755-6ef45d3fc01e"
+      ],
+      "hours": [
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00",
+        "06:30-18:00"
+      ],
+      "priceLevel": 1
+    },
+    {
+      "id": "greenfield-supermarket",
+      "name": "Greenfield Supermarket",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.06967,
+        "lng": 7.48293
+      },
+      "address": "22 Durban Street",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 980,
+      "phone": "+234 9 000 0029",
+      "description": "A large, well-lit supermarket with fresh produce, a butchery and an in-store bakery.",
+      "tags": [
+        "Fresh produce",
+        "Butchery",
+        "Bakery",
+        "Card payments"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1601598851547-4302969d0614",
+        "https://images.unsplash.com/photo-1610832958506-aa56368176cf"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "maitama-pantry",
+      "name": "Maitama Pantry",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.09355,
+        "lng": 7.48669
+      },
+      "address": "9 Nile Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 356,
+      "phone": "+234 9 000 0030",
+      "description": "Imported and local groceries, fine cheeses and a good wine aisle, at Maitama prices.",
+      "tags": [
+        "Imported goods",
+        "Wine",
+        "Cheese",
+        "Delivery"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1628102491629-778571d893a3",
+        "https://images.unsplash.com/photo-1631379578550-7038263db699"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00"
+      ]
+    },
+    {
+      "id": "jabi-daily-market",
+      "name": "Jabi Daily Market",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.06948,
+        "lng": 7.41348
+      },
+      "address": "30 Alex Ekwueme Way",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 512,
+      "phone": "+234 9 000 0031",
+      "description": "Everyday groceries, household essentials and fresh fruit at fair prices, with plenty of parking.",
+      "tags": [
+        "Parking",
+        "Household essentials",
+        "Fresh fruit"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1553531889-56cc480ac5cb",
+        "https://images.unsplash.com/photo-1554486855-60050042cd53"
+      ],
+      "hours": [
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "07:30-21:30",
+        "10:00-20:00"
+      ]
+    },
+    {
+      "id": "gwarinpa-grocers",
+      "name": "Gwarinpa Grocers",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.09529,
+        "lng": 7.41625
+      },
+      "address": "233 1st Avenue",
+      "area": "Gwarinpa",
+      "city": "Abuja",
+      "rating": 4.2,
+      "reviewCount": 301,
+      "phone": "+234 9 000 0032",
+      "description": "A dependable neighbourhood supermarket for foodstuff, toiletries and cold drinks.",
+      "tags": [
+        "Foodstuff",
+        "Toiletries",
+        "Cold drinks"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1601600576337-c1d8a0d1373c",
+        "https://images.unsplash.com/photo-1641440616173-7241e6fe6be9"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "12:00-19:00"
+      ]
+    },
+    {
+      "id": "asokoro-provisions",
+      "name": "Asokoro Provisions",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.04431,
+        "lng": 7.52343
+      },
+      "address": "6 Julius Nyerere Crescent",
+      "area": "Asokoro",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 188,
+      "phone": "+234 9 000 0033",
+      "description": "A tidy mini-mart for fresh bread, dairy and daily essentials, with a small organic section.",
+      "tags": [
+        "Organic",
+        "Dairy",
+        "Fresh bread"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1542838132-92c53300491e",
+        "https://images.unsplash.com/photo-1686641865501-8f7b2ffe063b"
+      ],
+      "hours": [
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "08:00-20:00",
+        "10:00-18:00"
+      ]
+    },
+    {
+      "id": "garki-value-store",
+      "name": "Garki Value Store",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.04196,
+        "lng": 7.50243
+      },
+      "address": "60 Ahmadu Bello Way",
+      "area": "Garki II",
+      "city": "Abuja",
+      "rating": 4.1,
+      "reviewCount": 644,
+      "phone": "+234 9 000 0034",
+      "description": "Big packs of rice, oil and provisions at wholesale-style prices.",
+      "tags": [
+        "Bulk buys",
+        "Rice & grains",
+        "Provisions"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1763838527744-7fcbdc559ea8",
+        "https://images.unsplash.com/photo-1664382953403-fc1ac77073a0"
+      ],
+      "hours": [
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00",
+        "08:00-21:00"
+      ]
+    },
+    {
+      "id": "utako-superstore",
+      "name": "Utako Superstore",
+      "category": "supermarket",
+      "location": {
+        "lat": 9.06518,
+        "lng": 7.44282
+      },
+      "address": "12 Okotie Eboh Street",
+      "area": "Utako",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 402,
+      "phone": "+234 9 000 0035",
+      "description": "A two-floor superstore with groceries downstairs and homeware and small electronics upstairs.",
+      "tags": [
+        "Groceries",
+        "Homeware",
+        "Electronics"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1604719312566-8912e9227c6a",
+        "https://images.unsplash.com/photo-1601599963565-b7ba29c8e3ff"
+      ],
+      "hours": [
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00",
+        "08:00-22:00"
+      ]
+    },
+    {
+      "id": "capital-iron-gym",
+      "name": "Capital Iron Gym",
+      "category": "gym",
+      "location": {
+        "lat": 9.08371,
+        "lng": 7.47876
+      },
+      "address": "14 Kumasi Crescent",
+      "area": "Wuse II",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 377,
+      "phone": "+234 9 000 0036",
+      "description": "Serious free weights, squat racks and friendly coaches. Day passes are available.",
+      "tags": [
+        "Free weights",
+        "Personal training",
+        "Day passes"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1534438327276-14e5300c3a48",
+        "https://images.unsplash.com/photo-1577992805669-c80be3285f36",
+        "https://images.unsplash.com/photo-1576678927484-cc907957088c"
+      ],
+      "hours": [
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "05:00-22:00",
+        "07:00-18:00",
+        "08:00-16:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "maitama-athletic-club",
+      "name": "Maitama Athletic Club",
+      "category": "gym",
+      "location": {
+        "lat": 9.10173,
+        "lng": 7.49674
+      },
+      "address": "1 Danube Street",
+      "area": "Maitama",
+      "city": "Abuja",
+      "rating": 4.8,
+      "reviewCount": 205,
+      "phone": "+234 9 000 0037",
+      "description": "A premium club with a pool, sauna, group classes and a juice bar. Members only, with guest passes.",
+      "tags": [
+        "Pool",
+        "Sauna",
+        "Group classes",
+        "Juice bar"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1716307043003-dbe6a5cc496e",
+        "https://images.unsplash.com/photo-1680609989998-6183fcea718b",
+        "https://images.unsplash.com/photo-1758957646695-ec8bce3df462"
+      ],
+      "hours": [
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "05:30-22:00",
+        "07:00-18:00"
+      ],
+      "priceLevel": 4
+    },
+    {
+      "id": "jabi-flow-studio",
+      "name": "Jabi Flow Studio",
+      "category": "gym",
+      "location": {
+        "lat": 9.07132,
+        "lng": 7.42769
+      },
+      "address": "4 Samuel Ogedengbe Crescent",
+      "area": "Jabi",
+      "city": "Abuja",
+      "rating": 4.7,
+      "reviewCount": 154,
+      "phone": "+234 9 000 0038",
+      "description": "Yoga, reformer pilates and mobility classes in a sunny studio, with beginners' sessions every weekday morning.",
+      "tags": [
+        "Yoga",
+        "Pilates",
+        "Mobility",
+        "Beginners welcome"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1588286840104-8957b019727f",
+        "https://images.unsplash.com/photo-1747239069226-55382c570116",
+        "https://images.unsplash.com/photo-1608405059861-b21a68ae76a2"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "08:00-14:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "utako-boxing-club",
+      "name": "Utako Boxing Club",
+      "category": "gym",
+      "location": {
+        "lat": 9.06801,
+        "lng": 7.44585
+      },
+      "address": "45 Obafemi Awolowo Way",
+      "area": "Utako",
+      "city": "Abuja",
+      "rating": 4.5,
+      "reviewCount": 188,
+      "phone": "+234 9 000 0039",
+      "description": "Boxing classes, bag work and strength conditioning in small groups, with patient coaches for beginners.",
+      "tags": [
+        "Boxing",
+        "Conditioning",
+        "Small classes"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1633394782368-6e7260566004",
+        "https://images.unsplash.com/photo-1716307046875-4c4ba2f43cab",
+        "https://images.unsplash.com/photo-1561532325-7d5231a2dede"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        null
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "asokoro-wellness-centre",
+      "name": "Asokoro Wellness Centre",
+      "category": "gym",
+      "location": {
+        "lat": 9.04887,
+        "lng": 7.51317
+      },
+      "address": "20 Yakubu Gowon Crescent",
+      "area": "Asokoro",
+      "city": "Abuja",
+      "rating": 4.6,
+      "reviewCount": 131,
+      "phone": "+234 9 000 0040",
+      "description": "A calm fitness centre with modern cardio machines, a small weights room and physiotherapy on site.",
+      "tags": [
+        "Cardio",
+        "Physiotherapy",
+        "Weights"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1593079831268-3381b0db4a77",
+        "https://images.unsplash.com/photo-1637430308606-86576d8fef3c",
+        "https://images.unsplash.com/photo-1633394782240-f81aba3f850d"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "07:00-15:00"
+      ],
+      "priceLevel": 3
+    },
+    {
+      "id": "corefit-24-7",
+      "name": "CoreFit 24/7",
+      "category": "gym",
+      "location": {
+        "lat": 9.08903,
+        "lng": 7.45357
+      },
+      "address": "3 Ahmadu Bello Way",
+      "area": "Mabushi",
+      "city": "Abuja",
+      "rating": 4.3,
+      "reviewCount": 266,
+      "phone": "+234 9 000 0041",
+      "description": "Open all day, every day, with plenty of machines and quiet late-night sessions.",
+      "tags": [
+        "Open 24 hours",
+        "Cardio",
+        "Machines"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1674834727206-4bc272bfd8da",
+        "https://images.unsplash.com/photo-1605296867304-46d5465a13f1",
+        "https://images.unsplash.com/photo-1540497077202-7c8a3999166f"
+      ],
+      "hours": [
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00",
+        "00:00-24:00"
+      ],
+      "priceLevel": 2
+    },
+    {
+      "id": "garki-strength-lab",
+      "name": "Garki Strength Lab",
+      "category": "gym",
+      "location": {
+        "lat": 9.01932,
+        "lng": 7.49068
+      },
+      "address": "38 Ladoke Akintola Boulevard",
+      "area": "Garki II",
+      "city": "Abuja",
+      "rating": 4.4,
+      "reviewCount": 173,
+      "phone": "+234 9 000 0042",
+      "description": "A no-frills strength gym with power racks, deadlift platforms and a friendly early-morning crowd.",
+      "tags": [
+        "Powerlifting",
+        "Free weights",
+        "Early opening"
+      ],
+      "photos": [
+        "https://images.unsplash.com/photo-1517836357463-d25dfeac3438",
+        "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7",
+        "https://images.unsplash.com/photo-1534368270820-9de3d8053204"
+      ],
+      "hours": [
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "06:00-21:00",
+        "09:00-14:00"
+      ],
+      "priceLevel": 1
     }
   ]
 }

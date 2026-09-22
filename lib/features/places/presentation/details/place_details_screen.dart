@@ -5,7 +5,6 @@ import 'package:latlong2/latlong.dart';
 
 import '../../../../core/theme/app_palette.dart';
 import '../../../../core/utils/formatters.dart';
-import '../../../location/location_providers.dart';
 import '../../application/place_providers.dart';
 import '../../domain/place.dart';
 import '../common/category_visuals.dart';
@@ -86,8 +85,8 @@ class _PlaceDetailsViewState extends ConsumerState<_PlaceDetailsView> {
     final theme = Theme.of(context);
     final palette = context.palette;
     final categoryColor = palette.category(place.category);
-    final now = ref.watch(lagosNowProvider).value ?? lagosNow();
-    final origin = ref.watch(nearbyOriginProvider);
+    final now = ref.watch(watNowProvider).value ?? watNow();
+    final origin = ref.watch(nearbyOriginProvider(place.city));
     final distance = origin == null
         ? null
         : _distance.as(LengthUnit.Meter, origin, place.location);
@@ -287,7 +286,7 @@ class _PlaceDetailsViewState extends ConsumerState<_PlaceDetailsView> {
             _Section(
               title: 'Opening hours',
               trailing: Text(
-                'Lagos time',
+                '${place.city.label} time',
                 style: theme.textTheme.bodySmall?.copyWith(
                   color: theme.colorScheme.onSurfaceVariant,
                 ),

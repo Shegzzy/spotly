@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:assessment_app/features/places/data/asset_place_repository.dart';
+import 'package:assessment_app/features/places/domain/city.dart';
 import 'package:assessment_app/features/places/domain/place_category.dart';
 import 'package:assessment_app/features/places/domain/place_repository.dart';
 import 'package:flutter/services.dart';
@@ -9,35 +10,30 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  test('loads and parses the bundled Lagos sample data', () async {
+  test('loads and parses the bundled sample data', () async {
     final repository = AssetPlaceRepository(latency: Duration.zero);
     final places = await repository.fetchPlaces();
 
-    expect(places, hasLength(42));
+    expect(places, hasLength(84));
     expect(
       places.map((p) => p.id).toSet(),
-      hasLength(42),
+      hasLength(84),
       reason: 'ids are unique',
     );
-    for (final category in PlaceCategory.values) {
-      expect(
-        places.where((p) => p.category == category),
-        isNotEmpty,
-        reason: category.name,
-      );
+    for (final city in City.values) {
+      final inCity = places.where((p) => p.city == city);
+      expect(inCity, hasLength(42), reason: city.name);
+      for (final category in PlaceCategory.values) {
+        expect(
+          inCity.where((p) => p.category == category),
+          isNotEmpty,
+          reason: '${city.name} ${category.name}',
+        );
+      }
     }
     for (final place in places) {
-      // Every sample place sits in Lagos.
-      expect(
-        place.location.latitude,
-        inInclusiveRange(6.35, 6.70),
-        reason: place.id,
-      );
-      expect(
-        place.location.longitude,
-        inInclusiveRange(3.25, 3.65),
-        reason: place.id,
-      );
+      // Every place sits in the city it says it's in.
+      expect(City.containing(place.location), place.city, reason: place.id);
       expect(place.photos, isNotEmpty, reason: place.id);
     }
   });

@@ -6,15 +6,22 @@ import '../../../application/place_providers.dart';
 import '../../../domain/place_category.dart';
 import '../../common/category_visuals.dart';
 
-/// A horizontal row of category filters under the search bar.
+/// A horizontal row under the search bar: the city switcher, then the
+/// category filters.
 class CategoryChips extends ConsumerWidget {
-  const CategoryChips({super.key, required this.onChanged});
+  const CategoryChips({
+    super.key,
+    required this.onChanged,
+    required this.onCityTap,
+  });
 
   final VoidCallback onChanged;
+  final VoidCallback onCityTap;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final selected = ref.watch(placeFilterProvider.select((f) => f.category));
+    final city = ref.watch(selectedCityProvider);
     final theme = Theme.of(context);
 
     void select(PlaceCategory? category) {
@@ -28,10 +35,33 @@ class CategoryChips extends ConsumerWidget {
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         clipBehavior: Clip.none,
-        itemCount: PlaceCategory.values.length + 1,
-        separatorBuilder: (_, _) => const SizedBox(width: 8),
+        itemCount: PlaceCategory.values.length + 2,
+        separatorBuilder: (_, index) => index == 0
+            ? Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: Center(
+                  child: Container(
+                    width: 1,
+                    height: 22,
+                    color: theme.colorScheme.outline,
+                  ),
+                ),
+              )
+            : const SizedBox(width: 8),
         itemBuilder: (context, index) {
           if (index == 0) {
+            return _Chip(
+              label: city.label,
+              icon: Icons.place_rounded,
+              trailing: Icons.expand_more_rounded,
+              semanticLabel: 'City: ${city.label}. Change city',
+              color: theme.colorScheme.primary,
+              onColor: theme.colorScheme.onPrimary,
+              selected: false,
+              onTap: onCityTap,
+            );
+          }
+          if (index == 1) {
             return _Chip(
               label: 'All',
               icon: Icons.apps_rounded,
@@ -41,7 +71,7 @@ class CategoryChips extends ConsumerWidget {
               onTap: () => select(null),
             );
           }
-          final category = PlaceCategory.values[index - 1];
+          final category = PlaceCategory.values[index - 2];
           return _Chip(
             label: category.pluralLabel,
             icon: category.icon,
@@ -64,10 +94,14 @@ class _Chip extends StatelessWidget {
     required this.onColor,
     required this.selected,
     required this.onTap,
+    this.trailing,
+    this.semanticLabel,
   });
 
   final String label;
   final IconData icon;
+  final IconData? trailing;
+  final String? semanticLabel;
   final Color color;
   final Color onColor;
   final bool selected;
@@ -82,7 +116,7 @@ class _Chip extends StatelessWidget {
     return Semantics(
       button: true,
       selected: selected,
-      label: '$label filter',
+      label: semanticLabel ?? '$label filter',
       excludeSemantics: true,
       child: AnimatedContainer(
         duration: const Duration(milliseconds: 220),
@@ -123,6 +157,10 @@ class _Chip extends StatelessWidget {
                       color: foreground,
                     ),
                   ),
+                  if (trailing case final trailing?) ...[
+                    const SizedBox(width: 2),
+                    Icon(trailing, size: 18, color: foreground),
+                  ],
                 ],
               ),
             ),
